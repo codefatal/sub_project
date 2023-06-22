@@ -27,3 +27,19 @@ header, nav, #content, footer {
 #content {
     overflow: hidden;
 }
+
+ul {
+    list-style: none;
+}
+
+div.carousel-item ul li {
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+}
+
+div.carousel-item ul li span:first-of-type {
+    color: red;
+    background-color: gray;
+    font-size: 14px;
+}
