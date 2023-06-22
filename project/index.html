@@ -18,6 +18,7 @@
     <!-- [5] layout 영역 -->
     <link rel="stylesheet" href="css/jobkh.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrap header">
@@ -25,7 +26,7 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni et cupiditate cum quas maiores rerum? Deserunt, vel error mollitia cupiditate ad alias corrupti sunt aliquam veniam rem? Consectetur, id soluta?</p>
         </header>
         <nav>
-            <div>
+            <div id="point">
                 <div class="tab-menu">
                     <ul class="tab-menu1">
                         <li class="tab-menu1"><a href="#"># 공채속보</a></li>
@@ -35,202 +36,175 @@
                         <li class="tab-menu1"><a href="#"># 진로탐색</a></li>
                         <li class="tab-menu1"><a href="#"># 취업톡톡</a></li>
                     </ul>
-                </div>
-                <div>
                     <ul class="tab-menu2">
                         <li class="tab-menu2"><a href="#">개인</a></li>
                         <li class="tab-menu2"><a href="#">기업</a></li>
                     </ul>
                 </div>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <ul>
-                            <li>
-                                <div class="box">
-                                    <span>이번주 공채</span>
-                                    <h4>현대자동차 전략지원 총무기획</h4>
-                                    <span>현대자동차</span>
-                                    <span>D-18</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="box">
-                                    <span>이번주 공채</span>
-                                    <h4>컴투스 그룹 원클릭 특별채용</h4>
-                                    <span>컴투스</span>
-                                    <span>D-10</span>
-                                </div>
-                            </li>
-                            <li>
-                                <span>이번주 공채</span>
-                                <h4>채용연계형 인턴 및 경력모집</h4>
-                                <span>신도리코</span>
-                                <span>D-5</span>
-                            </li>
-                            <li>
-                                <span>이번주 공채</span>
-                                <h4>카카오 모빌리티 신입공채 모집</h4>
-                                <span>카카오 모빌리티</span>
-                                <span>D-9</span>
-                            </li>
-                            <li><img src="images/aaa.png"></li>
-                            <li>
-                                <span>그룹사 공채</span>
-                                <h4>[삼표그룹] 각 사업총괄 신입 및 경력직 공개채용</h4>
-                                <span>㈜삼표</span>
-                                <span>D-10</span>
-                            </li>
-                            <li>
-                                <span>그룹사 공채</span>
-                                <h4>SK 하이닉스 청년 Hy-Five 9기 모집</h4>
-                                <span>하이닉스</span>
-                                <span>D-11</span>
-                            </li>
-                        </ul>
+                <div class="point-left point-box active">
+                    <div id="carouselExampleControls" class="carousel slide tab-cont" data-bs-ride="carousel">
+                        <div class="carousel-inner match-slide">
+                          <div class="carousel-item active swiper-container">
+                            <ul class="box-lst">
+                                <li>
+                                    <div class="box">
+                                        <span>이번주 공채</span>
+                                        <p>현대자동차 전략지원 총무기획</p>
+                                        <span>현대자동차</span>
+                                        <span>D-18</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>이번주 공채</span>
+                                        <p>컴투스 그룹 원클릭 특별채용</p>
+                                        <span>컴투스</span>
+                                        <span>D-10</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <span>이번주 공채</span>
+                                        <p>채용연계형 인턴 및 경력모집</p>
+                                        <span>신도리코</span>
+                                        <span>D-5</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>이번주 공채</span>
+                                        <p>카카오 모빌리티 신입공채 모집</p>
+                                        <span>카카오 모빌리티</span>
+                                        <span>D-9</span>
+                                    </div>
+                                </li>
+                                <li><img src="images/aaa.png"></li>
+                                <li>
+                                    <div class="box">
+                                        <span>그룹사 공채</span>
+                                        <p>[삼표그룹] 각 사업총괄 신입 및 경력직 공개채용</p>
+                                        <span>㈜삼표</span>
+                                        <span>D-10</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>그룹사 공채</span>
+                                        <p>SK 하이닉스 청년 Hy-Five 9기 모집</p>
+                                        <span>하이닉스</span>
+                                        <span>D-11</span>
+                                    </div>
+                                </li>
+                            </ul>
+                          </div>
+                          <div class="carousel-item">
+                            <ul class="box-lst">
+                                <li>
+                                    <div class="box">
+                                        <span>최근시작 공채</span>
+                                        <p>[전장부품] 신입(석/박사) 및 경력사원 채용 - 제품품질</p>
+                                        <span>엘지이노텍</span>
+                                        <span>D-17</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>최근시작 공채</span>
+                                        <p>대전충청지역본부 AMI분야 비정규직 2차 추가모집</p>
+                                        <span>한전케이디엔</span>
+                                        <span>D-14</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <span>최근시작 공채</span>
+                                        <p>[GS리테일] 모바일기획팀 서비스기획 및 업무지원 채용</p>
+                                        <span>GS리테일</span>
+                                        <span>D-14</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>최근시작 공채</span>
+                                        <p>경영기획 담당 경력직 채용</p>
+                                        <span>SK쉴더스㈜</span>
+                                        <span>D-9</span>
+                                    </div>
+                                </li>
+                                <li><img src="images/ps_bnr6.png"></li>
+                                <li>
+                                    <div class="box">
+                                        <span>마감 임박 공채</span>
+                                        <p>23년도 4차 원자력정비기술센터 단기노무원 채용</p>
+                                        <span>한전KPS</span>
+                                        <span>오늘마감</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>마감 임박 공채</span>
+                                        <p>컴투스 그룹 원클릭 특별채용</p>
+                                        <span>에프알엘코리아㈜</span>
+                                        <span>오늘마감</span>
+                                    </div>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                        <!--기업라운지-->
+                        <div class="tab-cont active corp-contents-item contents-rounge" id="dev-cont-Cntnt_CorpLounge" data-contentnumber="7"></div>
+                        <!--//기업라운지-->
                       </div>
-                      <div class="carousel-item">
-                        <ul>
-                            <li>
-                                <span>최근시작 공채</span>
-                                <h4>[전장부품] 신입(석/박사) 및 경력사원 채용 - 제품품질</h4>
-                                <span>엘지이노텍</span>
-                                <span>D-17</span>
-                            </li>
-                            <li>
-                                <span>최근시작 공채</span>
-                                <h4>대전충청지역본부 AMI분야 비정규직 2차 추가모집</h4>
-                                <span>한전케이디엔</span>
-                                <span>D-14</span>
-                            </li>
-                            <li>
-                                <span>최근시작 공채</span>
-                                <h4>[GS리테일] 모바일기획팀 서비스기획 및 업무지원 채용</h4>
-                                <span>GS리테일</span>
-                                <span>D-14</span>
-                            </li>
-                            <li>
-                                <span>최근시작 공채</span>
-                                <h4>경영기획 담당 경력직 채용</h4>
-                                <span>SK쉴더스㈜</span>
-                                <span>D-9</span>
-                            </li>
-                            <li><img src="images/ps_bnr6.png"></li>
-                            <li>
-                                <span>마감 임박 공채</span>
-                                <h4>23년도 4차 원자력정비기술센터 단기노무원 채용</h4>
-                                <span>한전KPS</span>
-                                <span>오늘마감</span>
-                            </li>
-                            <li>
-                                <span>마감 임박 공채</span>
-                                <h4>컴투스 그룹 원클릭 특별채용</h4>
-                                <span>에프알엘코리아㈜</span>
-                                <span>오늘마감</span>
-                            </li>
-                        </ul>
-                      </div>
+                   </div>
+                    <div class="point-right point-box">
+                        <div class="notice-wrap">
+                            <p class="tit">
+                                <a href="#" target="_blank">공지</a>
+                            </p>
+                            <div class="noti-slide">
+                                <div class="swiper-container">
+                                <ul class="swiper-wrapper lst">
+                                    <li class="swiper-slide">
+                                        <a href="#" target="_blank">[사전공지] 개인회원 만 나이 시행 안내</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" target="_blank">[이벤트] &lt;이상한 나라의 괴짜들 展&gt; 초대권 받자!</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" target="_blank">``원픽``으로 이행시 짓고 시원한 빙수 받자!</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" target="_blank">전국 대학생 우산 대여 캠페인</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" target="_blank">[시스템 점검 공지] 06/23(금) AM 00시-06시</a>
+                                    </li>
+                                </ul>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            <!--기업라운지-->
-            <div class="tab-cont active corp-contents-item contents-rounge" id="dev-cont-Cntnt_CorpLounge" data-contentnumber="7"></div>
-            <!--//기업라운지-->
-            
-            <div class="point-right point-box">
-                <div class="notice-wrap">
-
-                    <h3 class="tit">
-                        <a href="#" target="_blank">공지</a>
-                    </h3>
-                    <div class="noti-slide">
-                        <div class="swiper-container">
-                        <ul class="swiper-wrapper lst"> 
-                            <li class="swiper-slide" data-swiper-slide-index="0" style="height: 792px;">
-                                <a href="#" target="_blank">[사전공지] 개인회원 만 나이 시행 안내</a>
-                            </li>
-                            <li class="swiper-slide" data-swiper-slide-index="0" style="height: 792px;">
-                                <a href="#" target="_blank">[이벤트] &lt;이상한 나라의 괴짜들 展&gt; 초대권 받자!</a>
-                            </li>
-                            <li class="swiper-slide" data-swiper-slide-index="0" style="height: 792px;">
-                                <a href="#" target="_blank">``원픽``으로 이행시 짓고 시원한 빙수 받자!</a>
-                            </li>
-                            <li class="swiper-slide" data-swiper-slide-index="0" style="height: 792px;">
-                                <a href="#" target="_blank">전국 대학생 우산 대여 캠페인</a>
-                            </li>
-                            <li class="swiper-slide" data-swiper-slide-index="0" style="height: 792px;">
-                                <a href="#" target="_blank">[시스템 점검 공지] 06/23(금) AM 00시-06시</a>
-                            </li>
-                        </ul>
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="service-box">
-                <div class="tool">
-                    <h3 class="tit">취업 성공 툴</h3>
-                    <ul>
-                        <li><a href="#">자소서작성</a></li>
-                        <li><a href="#">맞춤법검사</a></li>
-                        <li><a href="#">글자수세기</a></li>
-                        <li><a href="#">학점계산기</a></li>
-                    </ul>
-                </div>
-                <div class="rcmd">
-                    <h3 class="tit">추천 서비스</h3>
-                    <div class="tags blind" id="dev-svc-user-none">
-                        <a href="#">이직은 원픽</a>
-                        <a href="#">합격자소서</a>
-                        <a href="#">인적성·면접후기</a>
-                        <a href="#">공채달력</a>
-                        <a href="#">합격스펙</a>
-                        <a href="#">연봉검색순위</a>
-                        <a href="#">일간 채용 TOP100</a>
-                        <a href="#">이력서 다운로드</a>
-                    </div>
-                    <div class="tags blind" id="dev-svc-corp-none">
-                        <a href="#">원픽 채용</a>
-                        <a href="#"></a>
-                        <a href="#"></a>
-                        <a href="#">기업용 인적성 검사</a>
-                        <a href="#">채용대행 솔루션</a>
-                    </div>
-                    <div class="tags blind" id="dev-svc-user-starter">
-                        <a href="#">이직은 원픽</a>
-                        <a href="#">합격자소서</a>
-                        <a href="#">공채달력</a>
-                        <a href="#">인적성·면접후기</a>
-                        <a href="#">합격스펙</a>
-                        <a href="#">이력서 다운로드</a>
-                        <a href="#">연봉검색순위</a>
-                        <a href="#">전문채용관</a>
-                    </div>
-                    <div class="tags blind" id="dev-svc-user-career">
-                        <a href="#">이직은 원픽</a>
-                        <a href="#">합격자소서</a>
-                        <a href="#">인적성·면접후기</a>
-                        <a href="#">합격스펙</a>
-                        <a href="#">연봉검색순위</a>
-                        <a href="#">일간 채용 TOP100</a>
-                        <a href="#">이력서 다운로드</a>
-                    </div>
-                    <div class="tags blind" id="dev-svc-corp">
-                        <a href="#">원픽 채용</a>
-                        <a href="#">채용광고</a>
-                        <a href="#">배너광고</a>
-                        <a href="#">기업용 인적성 검사</a>
-                        <a href="#">채용대행 솔루션</a>
-                    </div>
-                    <div class="tags blind" id="dev-svc-searchfirm">
-                        <a href="#">플래티넘 서비스</a>
-                        <a href="#">인재검색</a>
+                    <hr>
+                    <div class="service-box">
+                        <div class="tool">
+                            <p class="tit">취업 성공 툴</p>
+                            <ul class="menu">
+                                <li class="menu-item"><a href="#">자소서작성</a></li>
+                                <li class="menu-item"><a href="#">맞춤법검사</a></li>
+                                <li class="menu-item"><a href="#">글자수세기</a></li>
+                                <li class="menu-item"><a href="#">학점계산기</a></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="rcmd">
+                            <p class="tit">추천 서비스</p>
+                            <div class="tags blind">
+                                <a href="#">이직은 원픽</a>
+                                <a href="#">합격자소서</a>
+                                <a href="#">인적성·면접후기</a>
+                                <a href="#">공채달력</a>
+                                <a href="#">합격스펙</a>
+                                <a href="#">연봉검색순위</a>
+                                <a href="#">일간 채용 TOP100</a>
+                                <a href="#">이력서 다운로드</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,6 +239,7 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora sed pariatur quasi eaque officia officiis ex, odit dolores, placeat provident illum dolore voluptates expedita ratione ipsa voluptas quos natus nostrum.</p>
         </footer>
     </div>
+    <script src="js/jobkh.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
