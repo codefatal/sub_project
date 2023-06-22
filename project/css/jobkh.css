@@ -27,3 +27,37 @@ header, nav, #content, footer {
 #content {
     overflow: hidden;
 }
+
+
+.tab-menu1 {
+    float: left;
+}
+
+.tab-menu2 {
+    float: left;
+}
+
+.tab-menu {
+    overflow: hidden;
+}
+
+div.carousel-item ul {
+    list-style: none;
+    width: 70%;
+    height: 350px;
+    display: flex;
+    text-align: left;
+}
+
+div.carousel-item ul li {
+    display: list-item;
+    position: relative;
+    width: 230px;
+    height: 164px;
+}
+
+div.carousel-item ul li span:first-of-type {
+    color: red;
+    background-color: gray;
+    font-size: 14px;
+}
