@@ -28,14 +28,32 @@ header, nav, #content, footer {
     overflow: hidden;
 }
 
-ul {
+
+.tab-menu1 {
+    float: left;
+}
+
+.tab-menu2 {
+    float: left;
+}
+
+.tab-menu {
+    overflow: hidden;
+}
+
+div.carousel-item ul {
     list-style: none;
+    width: 70%;
+    height: 350px;
+    display: flex;
+    text-align: left;
 }
 
 div.carousel-item ul li {
-    width: 200px;
-    height: 150px;
-    display: inline-block;
+    display: list-item;
+    position: relative;
+    width: 230px;
+    height: 164px;
 }
 
 div.carousel-item ul li span:first-of-type {
