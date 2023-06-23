@@ -53,7 +53,7 @@
         .scrap{
             color: gray;
             border: 0;
-            background-color: blanchedalmond;
+            background-color: rgba(255, 235, 204,0);
             
         }
         .applydate{
@@ -66,6 +66,37 @@
             width: 60px;
             font-size: 8pt;
             font-style: bold;
+            border-radius: 8px;
+            background-color: rgb(255, 238, 231)
+            
+        }
+        li{
+            list-style: none;
+        }
+        .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: rgba(33, 150, 243,0.5);
+        padding: 10px;
+        height: 650px;
+        }
+        .grid-container > li {
+        background-color: rgba(255, 235, 205,0.5);
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 12px;
+        }
+
+        .imagebanner {
+            width: 100%;
+            display: flex;
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #applyscrap{
             
         }
     </style>
@@ -83,11 +114,11 @@
     <div class="wrap content">
         <div id="content">
             <section class="First VVIP 채용관">
-                <div>
-                    <h6>First VVIp 채용관</h6>
+                <div style="display: flex; justify-content: space-between;">
+                    <h4>First VVIp 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul  class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -100,8 +131,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div> 
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -119,6 +149,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -132,6 +164,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -157,8 +190,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div style="display: inline;">D-3</div> 
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div style="display: inline;">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -181,7 +213,7 @@
                         <div>(주)우아한형제들</div>
                         <div>각 부문별 경력/신입 인재영입</div>
                         <div>
-                            <divv>상시채용</div>
+                            <div>상시채용</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
@@ -285,10 +317,10 @@
             </section>
             <section class="VVIP 채용관">
                 <div>
-                    <h6>VVIp 채용관</h6>
+                    <h4>VVIp 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -301,8 +333,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -320,6 +351,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -333,6 +366,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -358,8 +392,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick=""  class="applynow">즉시지원</button>
-                            <div class="applydate">D-3</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -402,10 +435,10 @@
             </section>
             <section class="VIP 채용관">
                 <div>
-                    <h6>VIP 채용관</h6>
+                    <h4>VIP 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -418,8 +451,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -437,6 +469,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -450,6 +484,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -475,8 +510,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-3</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -519,10 +553,10 @@
             </section>
             <section class="Top Class 채용관">
                 <div>
-                    <h6>Top Class 채용관</h6>
+                    <h4>Top Class 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -535,8 +569,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -554,6 +587,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -567,6 +602,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -592,8 +628,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-3</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -637,9 +672,9 @@
             <section> <!--TODO 4개짜리 배너-->
                 <hr>
                 <div class="middle_banner_wrap">
-                    <h3 class="skip">이미지 배너</h3>
+                    <h3 class="skip" >이미지 배너</h3>
                     <div class="list">
-                        <ul>
+                        <ul class="imagebanner">
                             <li><iframe src="https://yellow.contentsfeed.com/RealMedia/ads/adstream_sx.ads/jobkorea/main@Middle1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" width="306" height="200" title="채용광고"></iframe></li>
                             <li><iframe src="https://yellow.contentsfeed.com/RealMedia/ads/adstream_sx.ads/jobkorea/main@Middle2" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" width="306" height="200" title="채용광고"></iframe></li>
                             <li><iframe src="https://yellow.contentsfeed.com/RealMedia/ads/adstream_sx.ads/jobkorea/main@Middle3" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" width="306" height="200" title="채용광고"></iframe></li>
@@ -652,10 +687,10 @@
             </section>
             <section class="Excellent 채용관">
                 <div>
-                    <h6>Excellent 채용관</h6>
+                    <h4>Excellent 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -668,8 +703,7 @@
                         </div>
                         <div>
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -687,6 +721,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -700,6 +736,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -725,8 +762,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-3</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -769,10 +805,10 @@
             </section>
             <section class="Grand 채용관">
                 <div>
-                    <h6>Grand 채용관</h6>
+                    <h4>Grand 채용관</h4>
                     <button type="button">상품안내<i aria-hidden="true"></i></button>
                 </div>
-                <ul>
+                <ul class="grid-container">
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/m/o/2459z00ztjdvslqtl2_3320gaegxiagxnwtlzg.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -785,8 +821,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-8</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-8</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -804,6 +839,8 @@
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
+                    <li>
+
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/h/y/2976n00nmfedqaikg29_3320ubfukcjpnrdmh2nu.gif?p=y&hash=c&upddt=20230605172300" alt="">
                         </div>
@@ -817,6 +854,7 @@
                             <div class="applydate">D-33</div>
                             <button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
+                    </li>
                     <li>
                         <div>
                             <img src="https://imgs.jobkorea.co.kr/Images/Logo/180/k/f/2293v00vyriri86_2020f7bfgri862vf.gif?p=y&hash=c&upddt=20230622165543" alt="">
@@ -842,8 +880,7 @@
                         </div>
                         <div id="applyscrap">
                             <button onclick="" class="applynow">즉시지원</button>
-                            <div class="applydate">D-3</div>
-                            <button onclick="" class="scrap">채용정보 스크랩</button>
+                            <div class="applydate">D-3</div><button onclick="" class="scrap">채용정보 스크랩</button>
                         </div>
                     </li>
                     <li>
@@ -886,12 +923,16 @@
             </section>
             <section class="게임분야 채용정보">
                 <div class="game">
-                    <h6>게임분야 채용정보</h6>
-                    <button type="button">채용광고 더보기<i aria-hidden="true"></i></button>
+                    <div>
+                        <h4>게임분야 채용정보</h4>
+                        <button type="button">채용광고 더보기<i aria-hidden="true"></i></button>
+                    </div>
                     <ul class="gamelist">
                         <li class="item">
                             <div class="company bg1">
-                                <div class="logo"><img src="//www.gamejob.co.kr/Images/Booth/B_Logo/n2ohrr.gif" width="100" height="30" onerror="this.src='www.gamejob.co.kr/Images/Booth/B_Logo/Logo_None.gif';" alt="니트로스튜디오"></div>니트로스튜디오
+                                <div class="logo">
+                                    <img src="//www.gamejob.co.kr/Images/Booth/B_Logo/n2ohrr.gif" width="100" height="30" onerror="this.src='www.gamejob.co.kr/Images/Booth/B_Logo/Logo_None.gif';" alt="니트로스튜디오">
+                                </div>니트로스튜디오
                             </div>
                     </ul>
                 </div>
