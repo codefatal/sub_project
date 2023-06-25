@@ -21,7 +21,7 @@ header, nav, #content, footer {
     width: 80vw;
     margin: 0 auto;
 
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 
 a, a:link, a:visited {
@@ -78,9 +78,9 @@ a, a:link, a:visited {
   .slide-box {
     text-align: center;
     font-size: 16px;
-    background: #fff;
+    background: #e2eaf3;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
   
@@ -123,33 +123,218 @@ a, a:link, a:visited {
 /* 박스 크기 */
 #point .box-lst .box {
     position: relative;
-    width: 200px;
+    width: 220px;
     height: 165px;
     box-sizing: border-box;
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    background-color: #fff;
     margin: 5px;
     padding: 5px;
     border-radius: 8px;
     overflow: hidden;
-
 }
 
-.box-double {
+div.box-double {
     position: relative;
-    width: 200px;
+    width: 220px;
     height: 330px;
     box-sizing: border-box;
-    border: 1px solid #000;
+    background-color: #fff;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+div.box-img {
+    position: relative;
+    width: 220px;
+    height: 330px;
+    box-sizing: border-box;
+    background-color: #fff;
     margin: 5px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+
+span.bdgs {
+    border-radius: 8px;
+    font-size: 11px;
+    margin: 5px;
+}
+
+span.bdgs > span.ut-bdg {
+    width:100%;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+span.bdgs > span.a {
+    border: 0.5px solid rgba(42,142,251,.5);
+    color: #2a8efb;
+    background-color: #f2f8ff;
+}
+
+span.bdgs > span.b {
+    border: 0.5px solid rgba(198,142,0,.5);
+    color: #c68e00;
+    background-color: #fffbf1;
+}
+
+span.bdgs > span.c {
+    border: 0.5px solid rgba(24,204,139,.5);
+    background-color: #f2fcff;
+    color: #18cc8b;
+}
+
+span.bdgs > span.d {
+    border: 0.5px solid rgba(255,80,27,.5);
+    background: #fff8f6;
+    color: #ff501b;
+}
+
+span.bdgs > span.e {
+    color: #1f429d;
+    background: #f2f6ff;
+    border: 0.5px solid rgba(31,66,157,.5);
+}
+
+span.bdgs > span.i {
+    color: #00a1ef;
+    background: #f4fcff;
+    border: 0.5px solid rgba(0,161,239,.5);
+}
+
+span.bdgs > span.j {
+    color: #1ab0ba;
+    background: #f2feff;
+    border: 0.5px solid rgba(26,176,186,.5);
+}
+
+span.bdgs > span.k {
+    color: #7ba621;
+    background: #fafff0;
+    border: 0.5px solid rgba(123,166,33,.5);
+}
+
+span.bdgs > span.l {
+    color: #be8866;
+    background: #fff9f5;
+    border: 0.5px solid rgba(190,136,102,.5);
+}
+
+span.bdgs > span.m {
+    color: #1b7794;
+    background: #f1fcff;
+    border: 0.5px solid rgba(27,119,148,.5);
+}
+
+span.bdgs > span.n {
+    color: #3748da;
+    background: #f7f7ff;
+    border: 0.5px solid rgba(55,72,218,.5);
+}
+
+span.bdgs > span.o {
+    color: #1b76ff;
+    background: #f4f9ff;
+    border: 0.5px solid rgba(27,118,255,.5);
+}
+
+span.bdgs > span.p {
+    color: #d6103f;
+    background: #fff5f8;
+    border: 0.5px solid rgba(214,16,63,.5);
+}
+
+span.bdgs > span.q {
+    color: #de8500;
+    background: #fff9f0;
+    border: 0.5px solid rgba(222,133,0,.5);
+}
+
+span.bdgs > span.r, span.bdgs > span.s {
+    color: #7645b5;
+    background: #faf7ff;
+    border: 0.5px solid rgba(118,69,181,.5);
+}
+
+span.cate {
+    font-size: 16px;
+    color: #171717;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.box h4.box-tit {
+    height: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+span.box-bot {
+    font-size: 12px;
+    margin: 5px;
+    padding: 5px;
+}
+
+span.box-bot > span.infogray {
+    color: gray;
+}
+
+ul.ms-ranking {
+    /* height: 258px; */
+    margin-top: 12px;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+span.rank-name {
+    font-weight: bold;
+}
+
+div.box-double h4.box-tit {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+div.box-img h4.box-tit {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+span.post-txt {
+    display: -webkit-box;
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    height: 125px;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 이미지 규격 */
 .box-lst li > img {
     border: 1px solid #000;
     border-radius: 8px;
-    height: 100;
+    margin: 0;
+    padding: 0;
 }
 
 /* 메뉴 버튼 */
@@ -266,4 +451,10 @@ div.blind {
     border-radius: 8px;
     padding: 10px;
     background-color: #fff;
+}
+
+div.blind a {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 5px;
 }
