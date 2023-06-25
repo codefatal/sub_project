@@ -8,6 +8,10 @@
     <!-- [2] content 영역 1040px 80vw 90% 배치(center) -->
     <!-- [3] reset.css 폴더경로 -->
     <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- TODO js jQuery -->
     <!-- [4] project명 또는 core.css 폴더경로 - bootstrap 등으로 대체 -->
     <!-- [4] 기본색상 10~15개 정도 class 미리 만들어두기 -->
@@ -25,7 +29,7 @@
         background: yellowgreen;
       }
       .wrap.content {
-        background: blanchedalmond;
+        background: whitesmoke;
       }
       .wrap.footer {
         background: aquamarine;
@@ -63,6 +67,7 @@
       }
       .applydate {
         display: inline;
+        font-size: 8px;
       }
       .applynow {
         color: coral;
@@ -81,12 +86,12 @@
         display: grid;
         grid-template-columns: auto auto auto auto;
         gap: 10px;
-        background-color: rgba(33, 150, 243, 0.5);
+        background-color: rgba(33, 150, 243, 0);
         padding: 10px;
         height: 650px;
       }
       .grid-container > li {
-        background-color: rgba(255, 235, 205, 0.5);
+        background-color: rgba(255, 235, 205, 0);
         border: 1px solid black;
         text-align: center;
         font-size: 20px;
@@ -101,10 +106,21 @@
         justify-content: space-between;
       }
       #applyscrap {
+        display: flex;
+        justify-content: space-between;
       }
       .bannerwrap {
         display: flex;
         justify-content: space-between;
+      }
+      .bannerwrap button {
+        background-color: rgba(128, 128, 128, 0);
+        border: none;
+      }
+      .fa .fa-star {
+        font-size: 10px;
+        height: 10px;
+        width: 10px;
       }
     </style>
     <link
@@ -165,7 +181,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -179,7 +195,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -195,8 +211,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -222,7 +240,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -236,7 +254,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div>상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -390,7 +408,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -404,7 +422,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -420,8 +438,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -447,7 +467,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -461,7 +481,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -515,7 +535,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -529,7 +549,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -545,8 +565,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -572,7 +594,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -586,7 +608,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -640,7 +662,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -654,7 +676,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -670,8 +692,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -697,7 +721,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -711,7 +735,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -811,7 +835,7 @@
               </div>
               <div>모니터랩</div>
               <div id="applyscrap">신입/경력 사원 공개채용</div>
-              <div>
+              <div id="applyscrap">
                 <button onclick="" class="applynow">즉시지원</button>
                 <div class="applydate">D-8</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
@@ -826,7 +850,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -840,7 +864,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -856,8 +880,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -883,7 +909,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -897,7 +923,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -951,7 +977,7 @@
               </div>
               <div>에스케이 머테리얼즈(주)</div>
               <div>부문별 경력직 모집<br />(R&D/경영/영업/생산)</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">오늘시작</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -965,7 +991,7 @@
               </div>
               <div>현대자동차(주)</div>
               <div>사업/기획, 경영지원, 디자인 부문, 경력직 채용</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-33</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -981,8 +1007,10 @@
               <div>
                 디지털 부문 경력사원 채용(데이터분석/UX전략/PLCC카드/디지털창구)
               </div>
-              <div class="applydate">D-4</div>
-              <button onclick="" class="scrap">채용정보 스크랩</button>
+              <div id="applyscrap">
+                <div class="applydate">D-4</div>
+                <button onclick="" class="scrap">채용정보 스크랩</button>
+              </div>
             </li>
             <li>
               <div>
@@ -1008,7 +1036,7 @@
               </div>
               <div>GS리테일</div>
               <div>수퍼사업부 점포표준화파트 채용형 인턴 모집</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">D-1</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
@@ -1022,7 +1050,7 @@
               </div>
               <div>(주)우아한형제들</div>
               <div>각 부문별 경력/신입 인재영입</div>
-              <div>
+              <div id="applyscrap">
                 <div class="applydate">상시채용</div>
                 <button onclick="" class="scrap">채용정보 스크랩</button>
               </div>
