@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>footer</title>
+    <!-- [9] footer 영역 -->
+    <link rel="stylesheet" href="css/jobkh_footer.css">
+    <style>
+        #footer {
+            width: 1001px;
+            float: left;
+            height: 198px;
+            background: url(images/footer_bg.jpg) top left no-repeat;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #574621;
+        }
+
+        article {
+            margin: 40px auto ;
+            background: azure;
+        }
+
+        #footer ul {
+            width: 1000px;
+            text-align: center;
+        }
+
+        #footer li {
+            display: inline;
+            list-style-type: none;
+            line-height: 44px;
+        }
+
+        #footer li a {
+            color: #574621;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #footer li a:visited {
+            text-decoration: none
+        }
+
+        #footer li a:hover {
+            text-decoration: underline
+        }
+
+        #copyright {
+            width: 1000px;
+            text-align: center;
+            float: left;
+            padding: 104px 0 0 0;
+
+        }
+
+        #copyright span {
+            padding: 0 57px;
+        }
+
+        #copyright a {
+            color: #574621;
+            text-decoration: underline
+        }
+
+        #copyright a:visited {
+            text-decoration: underline
+        }
+
+        #copyright a:hover {
+            text-decoration: none
+        }
+    </style>
 </head>
+
 <body>
-    <footer>
-        <div id="footer" class="footer footer--main">
+    <div id="footer">
+        <article>
+            <p><strong>공지사항 [수상] 잡코리아 '2023 브랜드 파워 1위' 수상 23.06.14</strong></p>
+        </article>
+        <ul class="footer_service">
+            <li><a href="https://jobkoreacareer.oopy.io">회사소개</a></li>
+            <li><a href="http://company.jobkorea.co.kr/service/default.asp">운영사이트</a></li>
+            <li><a href="https://www.jobkorea.co.kr/service_jk/provision/provision_gg.asp">이용약관</a></li>
+            <li><a href="https://www.jobkorea.co.kr/service/PolicyPrivacy"> <strong>개인정보처리방침</strong></a></li>
+            <li><a href="https://www.jobkorea.co.kr/service/ProvisionLOC"> <strong>위치기반서비스이용약관</strong></a></li>
+            <li><a href="http://company.jobkorea.co.kr/network/api.asp">Open API</a></li>
+            <li><a href="https://www.jobkorea.co.kr/service/company/ad">광고문의</a></li>
+            <li><a href="http://company.jobkorea.co.kr/network/default.asp#Partners">제휴문의</a></li>
+            <li><a href="https://www.jobkorea.co.kr/help/faq/user">고객센터</a></li>
+        </ul>
+
+        </ul>
+        <div id="copyright">
+            <span>고객센터 : 1588-9350(평일09:00 ~ 19:00 토요일 09:00 ~ 15:00) | FAX : 02-565-9351 | Email
+                helpdesk@jobkorea.co.kr <br>
+                <!-- <ul class="footer_sns">
+                    <li class="footer__sns-item"><a href="https://blog.naver.com/jobkorea1"><span
+                                class="skip">블로그</span></a></li>
+                    <li class="footer__sns-item"><a href="https://m.post.naver.com/my.nhn?memberNo=9028903"><span
+                                class="skip">포스트</span></a></li>
+                    <li class="footer__sns-item"><a href="https://www.facebook.com/jobkorea"><span
+                                class="skip">페이스북</span></a></li>
+                    <li class="footer__sns-item"><a href="https://www.instagram.com/jobkorea_albamon/"><span
+                                class="skip">인스타그램</span></a></li>
+                    <li class="footer__sns-item"><a
+                            href="https://www.youtube.com/channel/UCOrdY3p46GJh_CYacfwYieg"><span
+                                class="skip">유튜브</span></a></li> -->
+            </span>
+            <br>
+            <span>서울시 서초구 서초대로 301 동익성봉빌딩 16~18층 잡코리아 | 대표 : 윤현준 | 사업자등록번호 : 100-81-34859<br></span>
+            <span>통신판매업 신고번호 : 2016-서울서초-0287호 | 직업정보제공사업 신고번호:서울청제2016-11호 | 유료직업소개소 등록번호 :
+                제2022-3210195-14-5-00035호</span>
+            <span>&copy; <a href="https://www.jobkorea.co.kr/"><strong>JOBKOREA</strong></a> LLC.All rights
+                reserved</span>
+        </div>
+    </div>
+
+    <!-- <div id="footer" class="footer footer--main">
             <div class="footer__wrap">
                 <h2 class="skip">잡코리아 기타 정보</h2>
 
@@ -101,8 +212,10 @@
                     <div class="footer__company-item footer__company-item--job">유료직업소개업 등록번호 : 제2002-3210195-14-5-00035호
                     </div>
                 </div>
+                
                 <!--// 2019.10.24 : 수상로고 추가, 순서 변경 -->
-                <div class="footer__award">
+    <!--<div class="footer__award">
+                
                     <ul class="clear">
                         <li class="footer__award-item footer__award-item--kbpi"><a
                                 href="https://www.jobkorea.co.kr/help/notice/view?no=14626" target="_blank">2023 한국산업의
@@ -125,6 +238,7 @@
                         class="footer__award--more awardMore">더보기</a>
                 </div>
                 <!--// 2019.10.24 : 수상로고 추가, 순서 변경 -->
+    <!--
                 <div class="footer__mobile-service">
                     <a href="http://company.jobkorea.co.kr/Service/default.asp#mobile" target="_blank"
                         class="footer__mobile-service--information" onclick="GA_Event('홈_PC', '모바일소개', '모바일 서비스 안내');">
@@ -141,8 +255,9 @@
                     rights reserved.
                 </p>
             </div>
-        </div>
-    </footer>
+        </div> -->
+
 
 </body>
+
 </html>
