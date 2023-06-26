@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KH Job!</title>
     <!-- [1] 해상도 - 최적해상도 1260 결정 -->
-    <!-- [2] content 영역 1040px 80vw 90% 배치(center) -->
+    <!-- [2] content 영역 1260px -->
     <!-- [3] reset.css 폴더경로 -->
     <link rel="stylesheet" href="css/reset.css">
-    <!-- TODO js jQuery -->
     <!-- [4] project명 또는 core.css 폴더경로 - bootstrap 등으로 대체 -->
     <!-- [4] 기본색상 10~15개 정도 class 미리 만들어두기 -->
     <!-- [4] 폰트크기 3~7개 정도 class 미리 만들어두기 -->
@@ -33,7 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- nav active 별 스크립트 구성 -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function(e) {
             $(".person-tab li").click(function() {
                 // 모든 person-tab 항목에서 active 클래스를 제거합니다.
                 $(".person-tab li").removeClass("active");
@@ -91,6 +90,7 @@
                     $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
             });
 
+            // html 파일 불러오기
             $.ajax({
                 url : "header.html",
                 success : function(result) {
@@ -106,7 +106,7 @@
                 }
             });
             $.ajax({
-                url : "mainpage_body_.html",
+                url : "main.html",
                 success : function(result) {
                     var contentrefine = $(".wrap.content").html(result).find('main');
                     $('.wrap.content').html(contentrefine);

@@ -8,12 +8,12 @@
     overflow: hidden;
 }
 
-/* nav 왼쪽 */
+/* nav 왼쪽 사이즈 */
 #point .point-left {
     width: 70%;
 }
 
-/* nav 오른쪽 */
+/* nav 오른쪽 사이즈 */
 #point .point-right {
     width: 30%;
     padding: 10px;
@@ -29,6 +29,7 @@
     display: none;
 }
 
+/* Swiper wrapper 사이즈 */
 .wrap-menu {
     display: flex;
     height: 400px;
@@ -51,7 +52,7 @@
     justify-content: center;
   }
   
-  /* 버튼 스타일 */
+  /* swiper 버튼 스타일 */
   .btn-control > .swiper-button-prev,
   .btn-control > .swiper-button-next {
     position: absolute;
@@ -67,14 +68,17 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+    background-color: rgba(128, 128, 128, 0.500);
+    border-radius: 50%;
   }
-  
+
+  /* 왼쪽 버튼 위치 */
  .btn-control > .swiper-button-prev {
-    left: 10px;
+    left: 5px;
   }
-  
+  /* 오른쪽 버튼 위치 */
   .btn-control > .swiper-button-next {
-    right: 10px;
+    right: 5px;
   }
 
 
@@ -128,6 +132,7 @@ div.box-img {
 }
 
 
+/* 박스안 폰트 및 테두리 설정 */
 span.bdgs {
     border-radius: 8px;
     font-size: 11px;
@@ -140,6 +145,7 @@ span.bdgs > span.ut-bdg {
     padding: 5px;
 }
 
+/* 박스안 ut-bdg a~s까지 테두리, 배경색, 폰트색 설정 */
 span.bdgs > span.a {
     border: 0.5px solid rgba(42,142,251,.5);
     color: #2a8efb;
@@ -230,6 +236,7 @@ span.bdgs > span.r, span.bdgs > span.s {
     border: 0.5px solid rgba(118,69,181,.5);
 }
 
+/* 2배 박스안 제목 폰트 설정 */
 span.cate {
     font-size: 16px;
     color: #171717;
@@ -239,7 +246,7 @@ span.cate {
     padding: 5px;
 }
 
-
+/* 박스 h4 태그 폰트 설정 및 크기 설정 */
 .box h4.box-tit {
     height: 50%;
     font-size: 15px;
@@ -251,30 +258,35 @@ span.cate {
     padding: 5px;
 }
 
+/* 박스 하단 폰트 설정 */
 span.box-bot {
     font-size: 12px;
     margin: 5px;
     padding: 5px;
 }
 
+/* 박스 하단 일부 폰트 색 변경 */
 span.box-bot > span.infogray {
     color: gray;
 }
 
+/* 기업·연봉 연봉 검색 순위 박스 설정 */
 ul.ms-ranking {
-    /* height: 258px; */
-    margin-top: 12px;
+    height: auto;
+    margin-top: 10px;
     margin: 5px;
     padding: 5px;
     overflow: hidden;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 25px;
 }
 
+/* 기업·연봉 연봉 검색 순위 기업명 폰트 변경 */
 span.rank-name {
     font-weight: bold;
 }
 
+/* 2배 박스 h4 태그 폰트 설정 및 크기 설정 */
 div.box-double h4.box-tit {
     font-size: 15px;
     font-weight: bold;
@@ -282,6 +294,7 @@ div.box-double h4.box-tit {
     padding: 5px;
 }
 
+/* 2배 이미지 박스 h4 태그 폰트 설정 및 크기 설정 */
 div.box-img h4.box-tit {
     font-size: 15px;
     font-weight: bold;
@@ -289,6 +302,7 @@ div.box-img h4.box-tit {
     padding: 5px;
 }
 
+/* 취업톡톡 내용 폰트 및 내용 안넘치게 설정 */
 span.post-txt {
     display: -webkit-box;
     color: #6a6a6a;
@@ -335,7 +349,7 @@ span.post-txt {
 }
 
 .tab-menu .tab-menu2 {
-    width: 30%;
+    width: 35%;
     height: 40px;
     line-height: 40px;
     display: flex;
@@ -346,13 +360,13 @@ span.post-txt {
 .tab-menu2 li {
     width: 80px;
     margin: 5px -10px;
-    border: 1px solid #000;
     border-radius: 20px;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.5);
     color: #000;
+    font-weight: bold;
 }
 
-.tab-menu2 a {
+.tab-menu2 a, .tab-menu2 a:hover {
     color: #fff;
 }
 
@@ -366,6 +380,7 @@ div.noti-slide {
     overflow: hidden;
 }
 
+/* 공지 설정 */
 .verti > .noti {
     padding: 0;
     margin: 0;
@@ -393,7 +408,6 @@ ul.noti-ul {
     padding: 0 5px;
 }
 
-/* 스와이퍼 슬라이더 스타일 */
 /* 공지 스와이퍼 기능 */
 .noti-slide .verti {
     width: 100%;
@@ -404,7 +418,7 @@ li.noti {
     display: flex;
 }
 
-
+/* 취업성공 툴 사이즈 */
 div.tool {
     width: 400px; /* 원하는 너비 설정 */
 }
@@ -472,5 +486,4 @@ div.blind a {
 div.blind .onpick {
     border: 2px solid yellowgreen;
 }
-
 /* ===== nav css 끝 =====*/
