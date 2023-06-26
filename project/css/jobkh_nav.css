@@ -52,35 +52,40 @@
     justify-content: center;
   }
   
-  /* swiper 버튼 스타일 */
-  .btn-control > .swiper-button-prev,
-  .btn-control > .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    z-index: 10;
-    cursor: pointer;
-    color: #000;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    background-color: rgba(128, 128, 128, 0.500);
+/* swiper 버튼 스타일 */
+#point .point-left .match-slide .swiper-button-prev {
+    left: 0px;
+    width: 44px;
+    height: 44px;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
-  }
+    background-color: rgba(191,203,216,.3);
+    background-image: url(../images/prev_button.svg);
+    background-repeat: no-repeat;
+    background-position: 16px;
+    border: 1px solid rgba(0,0,0,0);
+    background-size: auto;
+    backdrop-filter: blur(5px);
+}
 
-  /* 왼쪽 버튼 위치 */
- .btn-control > .swiper-button-prev {
-    left: 5px;
-  }
-  /* 오른쪽 버튼 위치 */
-  .btn-control > .swiper-button-next {
-    right: 5px;
-  }
+#point .point-left .match-slide .swiper-button-next {
+    right: 0px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0);
+    background-size: auto;
+    background-color: rgba(191,203,216,.3);
+    background-image: url(../images/next_button.svg);
+    background-repeat: no-repeat;
+    background-position: 19px;
+    backdrop-filter: blur(5px);
+}
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
 
 /* 박스 저장 공간 */
 #point .box-lst {

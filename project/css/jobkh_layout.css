@@ -31,6 +31,12 @@ a, a:link, a:visited {
     cursor: pointer;
 }
 
+button {
+    overflow: visible;
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+}
+
 button, fieldset, form {
     border: 0;
 }

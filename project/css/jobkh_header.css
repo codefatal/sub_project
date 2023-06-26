@@ -1,8 +1,13 @@
+header .headInner, 
+header .headNavBar .navInner, 
+header .lyNavWrap {
+    width: 1260px;
+    min-width: 1260px;
+}
+
 header .headInner {
     padding-top: 32px;
     padding-bottom: 6px;
-    width: 1260px;
-    min-width: 1260px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -243,4 +248,429 @@ header .headInner .headBann .bannBx .bann-logo:after {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+header .headNavBar, 
+header .headNavBar .navInner {
+    display: flex;
+}
+
+header .headNavBar {
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+    height: 64px;
+    box-sizing: initial;
+}
+
+#headerWrap .headNavBar .navInner {
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+header .headNavBar .active {
+    overflow: visible;
+}
+
+header .headNavBar .allArea {
+    width: 38px;
+    height: 64px;
+}
+
+header .headNavBar .allArea .btnAllService {
+    position: relative;
+    width: 38px;
+    height: 100%;
+    padding: 20px 14px 20px 0;
+}
+
+header .headNavBar .allArea .btnAllService .spGnb {
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999px;
+    position: relative;
+    display: block;
+}
+
+header .headNavBar .allArea .btnAllService .menu-ham {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    display: block;
+    box-sizing: border-box;
+    text-indent: 0;
+}
+
+header .allArea.active .lyNavArea {
+    display: block;
+    height: 400px;
+}
+
+header .lyNavArea {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    border-top: 1px solid #e8e8e8;
+    background-color: #fff;
+    z-index: 100;
+}
+
+header .lyNavArea .lyNavWrap {
+    margin: 0 auto;
+    border: 1px solid #ebeef3;
+    border-top: none;
+    border-bottom: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+header .lyNavArea .lyNavWrap .titArea {
+    display: block;
+    padding: 27px 0 4px 26px;
+    border-bottom: none;
+    margin: 0 !important;
+}
+
+header .lyNavArea .lyNavWrap .titArea .tit .spGnb {
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-position: -140px -32px;
+    margin-left: 9px;
+    vertical-align: 0;
+    background: url(../images/sp_gnb.png) -140px -32px no-repeat;
+}
+
+header .lyNavArea .lyNavWrap .titArea .tit.beta, #headerWrap .lyNavArea .lyNavWrap .titArea .tit.beta .spGnb {
+    display: flex;
+    align-items: center;
+}
+
+header .lyNavArea .all-navWrap .colItem .navWrapBanner {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 173px;
+}
+
+header .lyNavArea .lyNavWrap .listBx {
+    padding-left: 26px;
+}
+
+header .lyNavArea .all-navWrap .listBx {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 26px;
+}
+
+header .lyNavArea .all-navWrap .listBx ul {
+    padding: 0;
+}
+
+header .lyNavArea .all-navWrap .listBx ul:first-child {
+    margin-bottom: 20px;
+}
+
+header .lyNavArea .lyNavWrap .listBx li {
+    margin-top: 9px;
+    height: 17px;
+}
+
+header .lyNavArea .lyNavWrap .listBx a {
+    font-size: 13px;
+    color: #666 !important;
+    letter-spacing: -.5px;
+    position: relative;
+    line-height: 15px;
+}
+
+header .lyNavArea .lyNavWrap .listBx:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .lyNavArea .all-navWrap .col5 .listBx ul {
+    width: 50%;
+}
+
+header .lyNavArea .all-navWrap .listBx ul li.home {
+    padding-bottom: 11px;
+}
+
+header .lyNavArea .lyNavWrap .listBx li {
+    margin-top: 9px;
+    height: 17px;
+}
+
+header .lyNavArea .all-navWrap .listBx ul:first-child {
+    margin-bottom: 20px;
+}
+
+header .lyNavArea .all-navWrap .listBx ul:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+header .lyNavArea .lyNavWrap .listBx:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .allArea .all-navWrap {
+    position: relative;
+}
+
+header .lyNavWrap .lyCol {
+    float: left;
+}
+
+header .allArea .all-navWrap .row01 .colItem {
+    height: 375px;
+}
+
+header .allArea .lyNavWrap .row01 .colItem {
+    height: 318px;
+}
+
+header .allArea .all-navWrap .row01 .lyCol:last-child .colItem {
+    border-right: 0 !important;
+}
+
+header .lyNavArea .lyNavWrap .colItem {
+    border-right: 1px solid #ebeef3;
+}
+
+header .lyNavArea .all-navWrap .colItem {
+    border-right: 1px solid #ebeef3;
+    position: relative;
+}
+
+header .all-navWrap .col4 {
+    width: 17% !important;
+}
+
+header .all-navWrap .col5 {
+    width: 32% !important;
+}
+
+header .lyNavWrap .lyRow:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .headNavBar .jkNavArea, 
+header .headNavBar .jkNavArea .serviceNav {
+    display: flex;
+}
+
+header .headNavBar .jkNavArea {
+    width: 100%;
+    margin: -1px 0 0 -1px;
+    align-items: center;
+}
+
+header .headNavBar .jkNavArea .navItem.theme,
+header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
+    position: relative;
+}
+
+header .headNavBar .userNav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .headNavBar .jkNavArea .userNav .userNav-item {
+    position: relative;
+    padding: 20px 10px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+header .headNavBar .jkNavArea .navItem .linkItem, 
+header .headNavBar .jkNavArea .navItem .linkItem .spNav {
+    display: flex;
+    align-items: center;
+}
+
+header .headNavBar .jkNavArea .navItem {
+    align-items: center;
+}
+
+header .headNavBar .jkNavArea .navItem .linkItem {
+    position: relative;
+    padding: 20px 14px;
+    line-height: 26px;
+    box-sizing: border-box;
+}
+
+header .headNavBar .jkNavArea .navItem .linkItem .spNav {
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    color: #171717;
+    background-image: none;
+    cursor: pointer;
+}
+
+header .headNavBar .jkNavArea .navItem .linkItem .spNav .txIr {
+    color: #171717;
+    letter-spacing: -.5px;
+}
+
+header .headNavBar .jkNavArea .serviceNav .navItem.start > a:before {
+    content: "";
+    background-image: url(../images/2023_top.svg);
+    display: block;
+    width: 26px;
+    height: 10px;
+    position: absolute;
+    background-size: 26px 10px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9px;
+    z-index: 1;
+}
+
+header .headNavBar .jkNavArea .navItem.theme:before {
+    content: "";
+    background-image: url(../images/turnover.svg);
+    display: block;
+    width: 30px;
+    height: 11px;
+    position: absolute;
+    background-size: 30px 11px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9px;
+    z-index: 1;
+}
+
+header .headNavBar .jkNavArea .navItem.theme .linkItem .spNav:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    margin-top: 3px;
+    background-image: url(../images/check.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-color: rgba(0,0,0,0);
+}
+
+header .headNavBar .jkNavArea .serviceNav .navItem.careerpath:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 11px;
+    background-image: url(../images/levelup.svg);
+    background-size: 40px 11px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9px;
+    z-index: 1;
+}
+
+header .headNavBar .jkNavArea .userNav .join .join-button, 
+header .headNavBar .jkNavArea .userNav .login .login-button {
+    font-size: 15px;
+    color: #6a6a6a;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+header .headNavBar .jkNavArea .userNav .userNav-item .txt-button {
+    font-size: 16px;
+    line-height: 28px;
+    color: #6a6a6a;
+    display: block;
+}
+
+header .headNavBar .jkNavArea .userNav .userNav-item:last-child {
+    margin-right: 0;
+}
+
+header .headNavBar .jkNavArea .userNav .corp, 
+header .headNavBar .jkNavArea .userNav .corp > a {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+header .headNavBar .jkNavArea .userNav .corp > a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6a6a6a;
+    border: 1px solid #e8e8e8;
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 50px;
+    letter-spacing: -.5px;
+}
+
+header .headNavBar .userNav .corp .lyMyArea {
+    left: auto;
+    right: 0;
+}
+
+header .headNavBar .userNav .lyMyArea {
+    display: none;
+    width: 184px;
+    position: absolute;
+    right: 0;
+    top: 62px;
+    background-color: #fff;
+    border: 1px solid #6a6a6a;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    border-radius: 8px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+header .headNavBar .userNav .lyMyArea .lyRow {
+    position: relative;
+}
+
+header .headNavBar .userNav .lyMyArea .lyRow + .myLists {
+    border-top: 1px solid #e8e8e8;
+}
+
+header .headNavBar .userNav .lyMyArea .myLists {
+    padding: 12px 0;
+    text-align: left;
+}
+
+header .headNavBar .userNav .corp .lyMyArea .icnArr {
+    left: auto;
+    right: 32px;
+}
+
+header .headNavBar .userNav .lyMyArea .icnArr {
+    display: block;
+    position: absolute;
+    left: 42px;
+    top: -10px;
+    width: 17px;
+    height: 10px;
+    background-position: -160px -55px;
+}
+
+header .headNavBar .navInner:after {
+    content: "";
+    display: block;
+    clear: both;
 }
