@@ -22,550 +22,552 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- jQuery 스크립트 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/project/css/reset.css">
-    <style>
-        header {
-            position: relative;
-            height: 90px;
-        }
+    <script>
+        $(document).ready(function () {
+            $('.btnBannPrev.spGnb').click(function () {
+                $('.bann-logo.on').removeClass('on');
+                $('.bannBx .bann-logo').first().addClass('on');
+            });
 
-        header>.logo {
-            position: absolute;
-            top: 20px;
-            left: 0;
-        }
-
-        .search{
-
-        }
-    </style>
+            $('.btnBannNext.spGnb').click(function () {
+                $('.bann-logo.on').removeClass('on');
+                $('.bannBx .bann-logo').last().addClass('on');
+            });
+        });
+    </script>
 </head>
-
 <body>
-    <header>
-        <!--채용상담-->
-        <div class="logo">
-            <img src="https://dummyimage.com/50x50/e3e6c8/000.jpg&text=kh" width="120" height="50">
-        </div>
-        <div class="search">
-            <input type="text" placeholder="NEW JOB, NEW ME">
-        </div>
-        <div class="main-menu">
-            <ul>    
-                <li>로그인</li>
-                <li>회원가입</li>
-                <li>기업서비스</li>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="search">
-            <h2 class="search">검색</h2>
-            <form action="">
-                <fieldset>
-                    <legend>Smart Match 통합검색</legend>
-                    <div class="search_a">
-                        <input type="text" id="text" title="검색어 입력" name="ktext" placeholder="NEW JOB, NEW ME"
-                            maxlength="50">
-                    </div>
-                    <div id="" class="">
-                        <p class="" id="">
-                            <button type="button" title="열림" class="">
-                                <span class="blind">열림</span>
-                            </button>
-                        </p>
-                    </div>
-                    <div class="" id="">
-                        <p class="">
-                            키워드 입력하시면
-                            <br>
-                            검색어와 채용정보를 추천해드립니다.
-                        </p>
-                        <p>
-                            <button>자동완성 켜기</button>
-                            <span>|</span>
-                            <button>닫기</button>
-                        </p>
-                    </div>
-                    <p>
-                        <button>닫힘</button>
-                    </p>
-                    <div>
-                        <iframe src="https:/www.jobkorea.co.kr/Main/_OneShotSearch" frameborder="0" scrolling="no"
-                            frameborder="0" marginheight="0" marginwidth="0" id="" name="AKCIfrm"></iframe>
-                    </div>
-                    <p>
-                        <button>자동완성 끄기</button>
-                        <span>|</span>
-                        <button>닫기</button>
-                    </p>
-                    <div>
-                        <button>검색</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        <div>
-            <div>
-                <a href="#">
-                    <span>상세검색</span>
-                </a>
-            </div>
-        </div>
-        <div class="">
-            <strong class="">잡코리아 주요 서비스</strong>
-            <div class="">
-                <button type="button" class="">이전</button>
-                <button type="button" class="">다음</button>
-            </div>
-        </div>
-        <div id="">
-            <div class="">
-                <h2 class="">전체서비스</h2>
-                <button type="button">
-                    <span class="">전체서비스 열기</span>
-                    <div class="menu">
-                        <svg xmlns="http:/www.w3.org/2--2/svg" width="18" height="14" viewbox="0 0 18 14" fill="none">
-                            <path class="line1"
-                                d="M0 0.75C0 0.335786 0.335786 0 0.75 0H16.75C17.1642 0 17.5 0.335786 17.5 0.75C17.5 1.16421 17.1642 1.5 16.75 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75Z"
-                                fill="#171717"></path>
-                            <path class="line2"
-                                d="M0 6.75C0 6.33579 0.335786 6 0.75 6H16.75C17.1642 6 17.5 6.33579 17.5 6.75C17.5 7.16421 17.1642 7.5 16.75 7.5H0.75C0.335786 7.5 0 7.16421 0 6.75Z"
-                                fill="#171717"></path>
-                            <path class="line3"
-                                d="M0.75 12C0.335786 12 0 12.3358 0 12.75C0 13.1642 0.335786 13.5 0.75 13.5H16.75C17.1642 13.5 17.5 13.1642 17.5 12.75C17.5 12.3358 17.1642 12 16.75 12H0.75Z"
-                                fill="#171717"></path>
-                        </svg>
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="skip">
-            <h2 class="skip">주요서비스</h2>
-            <ul>
-                <li id="gnbGi" class="navItem gi ">
-                    <a href="https://www.jobkorea.co.kr/recruit/joblist?menucode=local&localorder=1" class="linkItem"
-                        onclick="GA_Event('공통_PC', 'gnb', '채용정보');">
-                        <span class="spNav"><span class="txIr">채용정보</span></span></a>
-            </ul>
-        </div>
-        <div class="IyNavArea">
-            <h3 class="skip">채용정보 세부메뉴</h3>
-            <div class="IyNavArea">
-                <div class="inner side">
-                    <div class="row">
-                        <div class="colltem">
-                            <strong class="title">
-                                <a href="#">직무별</a>
-                            </strong>
-                            <ul>
-                                <li>
-                                    <a href="#">기획&#183전력</a>
-                                </li>
-                                <li>
-                                    <a href="#">인사&#183HR</a>
-                                </li>
-                                <li>
-                                    <a href="#">마케팅&#183광고&#183MD</a>
-                                </li>
-                                <li>
-                                    <a href="#">디자인</a>
-                                </li>
-                                <li>
-                                    <a href="#">운전&#183운송&#183배송</a>
-                                </li>
-                                <li>
-                                    <a href="#">고객상담&#183TM<< /a>
-                                </li>
-                                <li>
-                                    <a href="#">식&#183음료</a>
-                                </li>
-                                <li>
-                                    <a href="#">엔지니어링&#183설계</a>
-                                </li>
-                                <li>
-                                    <a href="#">교육</a>
-                                </li>
-                                <li>
-                                    <a href="#">의료&#183바이오</a>
-                                </li>
-                                <li>
-                                    <a href="#">공공&#183복지</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="#">법무&#183사무&#183총무</a>
-                                </li>
-                                <li>
-                                    <a href="#">회계&#183세무</a>
-                                </li>
-                                <li>
-                                    <a href="#">개발&#183데이터</a>
-                                </li>
-                                <li>
-                                    <a href="#">물류&#183무역</a>
-                                </li>
-                                <li>
-                                    <a href="#">영업</a>
-                                </li>
-                                <li>
-                                    <a href="#">금융&#183보험</a>
-                                </li>
-                                <li>
-                                    <a href="#">고객서비스&#183리테일</a>
-                                </li>
-                                <li>
-                                    <a href="#">제조&#183생산</a>
-                                </li>
-                                <li>
-                                    <a href="#">건축&#183시설</a>
-                                </li>
-                                <li>
-                                    <a href="#">미디어&#183문화&#183스포츠</a>
-                                </li>
-                            </ul>
+    <div class="wrap header">
+        <header>
+            <!-- headerInner -->
+            <div class="headInner">
+                <!--채용상담-->
+                <div class="logo">
+                    <h1 class="jkLogo">
+                        <a href="./index.html"></a> 
+                    </h1>
+                </div>
+                <div class="search">
+                    <h2 class="skip">검색</h2>
+                    <form class="global_seek" action="/search/">
+                        <fieldset>
+                            <legend>Smart Match 통합검색</legend>
+                            <div class="smKey">
+                                <input type="text" id="stext" title="검색어 입력" name="stext" placeholder="NEW JOB, NEW ME" maxlength="50" style="background: none;">
+                                <input type="submit" value="검색" class="submit spGnb" id="common_search_btn">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                    <div class="subSchArea">
+                        <div class="subSchLink">
+                            <a href="https://www.jobkorea.co.kr/recruit/joblist?menucode=search" class="linkItem">
+                                <span class="spNav"><span class="txIr">상세검색</span></span>
+                            </a>
                         </div>
                     </div>
+                    
+                    <!-- // 배너 영역 -->
+                    <div class="headBann">
+                        <strong class="skip">잡코리아 주요 서비스</strong>
+                        <div class="headBannBtns">
+                            <button type="button" class="btnBannPrev spGnb">이전</button>
+                            <button type="button" class="btnBannNext spGnb">다음</button>
+                        </div>
+                        <div class="bannBx">
+                            <a href="https://www.albamon.com" target="_blank" title="새창 열림" class="bann-logo bann-albamon on"></a>
+                            <a href="https://www.gamejob.co.kr" target="_blank" title="새창 열림" class="bann-logo bann-gamejob"></a>
+                        </div>
+                    </div>
+                    <!-- 배너 영역 // -->
+
+                            <!-- </div>
+                                <p class="" id="">
+                                    <button type="button" title="열림" class="">
+                                        <span class="blind">열림</span>
+                                    </button>
+                                </p>
+                            </div> -->
+                            <!-- <div class="" id="">
+                                <p class="">
+                                    키워드 입력하시면
+                                    <br>
+                                    검색어와 채용정보를 추천해드립니다.
+                                </p>
+                                <p>
+                                    <button>자동완성 켜기</button>
+                                    <span>|</span>
+                                    <button>닫기</button>
+                                </p>
+                            </div>
+                            <p>
+                                <button>닫힘</button>
+                            </p>
+                            <div>
+                                <iframe src="https:/www.jobkorea.co.kr/Main/_OneShotSearch" frameborder="0" scrolling="no"
+                                    frameborder="0" marginheight="0" marginwidth="0" id="" name="AKCIfrm"></iframe>
+                            </div>
+                            <p>
+                                <button>자동완성 끄기</button>
+                                <span>|</span>
+                                <button>닫기</button>
+                            </p>
+                            <div>
+                                <button>검색</button>
+                            </div> -->
+            <!-- <div class="">
+                <strong class="">잡코리아 주요 서비스</strong>
+                <div class="">
+                    <button type="button" class="">이전</button>
+                    <button type="button" class="">다음</button>
                 </div>
-                <strong>
-                    <a href="#">산업별</a>
-                </strong>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">서비스업</a>
-                        </li>
-                        <li>
-                            <a href="#">금융&#183;은행업</a>
-                        </li>
-                        <li>
-                            <a href="#">IT&#183;정보통신업</a>
-                        </li>
-                        <li>
-                            <a href="#">판매&#183;유통업</a>
-                        </li>
-                        <li>
-                            <a href="#">제조&#183;생산&#183;화학업</a>
-                        </li>
-                        <li>
-                            <a href="#">교육업<< /a>
-                        </li>
-                        <li>
-                            <a href="#">건설업</a>
-                        </li>
-                        <li>
-                            <a href="#">의료&#183;제약업</a>
-                        </li>
-                        <li>
-                            <a href="#">미디어&#183;광고업</a>
-                        </li>
-                        <li>
-                            <a href="#">문화&#183예술&#183;디자인업</a>
-                        </li>
-                        <li>
-                            <a href="#">기관&#183;협회</a>
-                        </li>
-                    </ul>
+            </div>
+            <div class="main-menu">
+                <ul>    
+                    <li>로그인</li>
+                    <li>회원가입</li>
+                    <li>기업서비스</li>
+                </ul>
+            </div>
+    
+            <div id="">
+                <div class="">
+                    <h2 class="">전체서비스</h2>
+                    <button type="button">
+                        <span class="">전체서비스 열기</span>
+                        <div class="menu">
+                            <svg xmlns="http:/www.w3.org/2--2/svg" width="18" height="14" viewbox="0 0 18 14" fill="none">
+                                <path class="line1"
+                                    d="M0 0.75C0 0.335786 0.335786 0 0.75 0H16.75C17.1642 0 17.5 0.335786 17.5 0.75C17.5 1.16421 17.1642 1.5 16.75 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75Z"
+                                    fill="#171717"></path>
+                                <path class="line2"
+                                    d="M0 6.75C0 6.33579 0.335786 6 0.75 6H16.75C17.1642 6 17.5 6.33579 17.5 6.75C17.5 7.16421 17.1642 7.5 16.75 7.5H0.75C0.335786 7.5 0 7.16421 0 6.75Z"
+                                    fill="#171717"></path>
+                                <path class="line3"
+                                    d="M0.75 12C0.335786 12 0 12.3358 0 12.75C0 13.1642 0.335786 13.5 0.75 13.5H16.75C17.1642 13.5 17.5 13.1642 17.5 12.75C17.5 12.3358 17.1642 12 16.75 12H0.75Z"
+                                    fill="#171717"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="skip">
+                <h2 class="skip">주요서비스</h2>
+                <ul>
+                    <li id="gnbGi" class="navItem gi ">
+                        <a href="https://www.jobkorea.co.kr/recruit/joblist?menucode=local&localorder=1" class="linkItem"
+                            onclick="GA_Event('공통_PC', 'gnb', '채용정보');">
+                            <span class="spNav"><span class="txIr">채용정보</span></span></a>
+                </ul>
+            </div>
+            <div class="IyNavArea">
+                <h3 class="skip">채용정보 세부메뉴</h3>
+                <div class="IyNavArea">
+                    <div class="inner side">
+                        <div class="row">
+                            <div class="colltem">
+                                <strong class="title">
+                                    <a href="#">직무별</a>
+                                </strong>
+                                <ul>
+                                    <li>
+                                        <a href="#">기획&#183전력</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">인사&#183HR</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">마케팅&#183광고&#183MD</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">디자인</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">운전&#183운송&#183배송</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">고객상담&#183TM<< /a>
+                                    </li>
+                                    <li>
+                                        <a href="#">식&#183음료</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">엔지니어링&#183설계</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">교육</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">의료&#183바이오</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">공공&#183복지</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#">법무&#183사무&#183총무</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">회계&#183세무</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">개발&#183데이터</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">물류&#183무역</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">영업</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">금융&#183보험</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">고객서비스&#183리테일</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">제조&#183생산</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">건축&#183시설</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">미디어&#183문화&#183스포츠</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <strong>
-                        <a href="#">지역별</a>
+                        <a href="#">산업별</a>
                     </strong>
                     <div>
                         <ul>
                             <li>
-                                <a href="#">서울</a>
+                                <a href="#">서비스업</a>
                             </li>
                             <li>
-                                <a href="#">경기</a>
+                                <a href="#">금융&#183;은행업</a>
                             </li>
                             <li>
-                                <a href="#">인천</a>
+                                <a href="#">IT&#183;정보통신업</a>
                             </li>
                             <li>
-                                <a href="#">대전</a>
+                                <a href="#">판매&#183;유통업</a>
                             </li>
                             <li>
-                                <a href="#">세종</a>
+                                <a href="#">제조&#183;생산&#183;화학업</a>
                             </li>
                             <li>
-                                <a href="#">충남</a>
+                                <a href="#">교육업<< /a>
                             </li>
                             <li>
-                                <a href="#">충북</a>
+                                <a href="#">건설업</a>
                             </li>
                             <li>
-                                <a href="#">광주</a>
+                                <a href="#">의료&#183;제약업</a>
                             </li>
                             <li>
-                                <a href="#">전남</a>
+                                <a href="#">미디어&#183;광고업</a>
                             </li>
                             <li>
-                                <a href="#">전북</a>
+                                <a href="#">문화&#183예술&#183;디자인업</a>
                             </li>
                             <li>
-                                <a href="#">대구</a>
-                            </li>
-                            <li>
-                                <a href="#">경북</a>
-                            </li>
-                            <li>
-                                <a href="#">부산</a>
-                            </li>
-                            <li>
-                                <a href="#">울산</a>
-                            </li>
-                            <li>
-                                <a href="#">경남</a>
-                            </li>
-                            <li>
-                                <a href="#">강원</a>
-                            </li>
-                            <li>
-                                <a href="#">제주</a>
-                            </li>
-                            <li>
-                                <a href="#">전국</a>
+                                <a href="#">기관&#183;협회</a>
                             </li>
                         </ul>
+                        <strong>
+                            <a href="#">지역별</a>
+                        </strong>
                         <div>
-                            <strong>
-                                <a href="#">기업별</a>
-                            </strong>
                             <ul>
                                 <li>
-                                    <a href="#">대기업</a>
+                                    <a href="#">서울</a>
                                 </li>
                                 <li>
-                                    <a href="#">중견&#183;강소기업</a>
+                                    <a href="#">경기</a>
                                 </li>
                                 <li>
-                                    <a href="#">외국계기업</a>
+                                    <a href="#">인천</a>
                                 </li>
                                 <li>
-                                    <a href="#">공기업&#183;공사</a>
+                                    <a href="#">대전</a>
                                 </li>
                                 <li>
-                                    <a href="#">상장기업</a>
+                                    <a href="#">세종</a>
                                 </li>
                                 <li>
-                                    <a href="#">TOP100</a>
+                                    <a href="#">충남</a>
                                 </li>
                                 <li>
-                                    <a href="#">스마트매치</a>
+                                    <a href="#">충북</a>
                                 </li>
                                 <li>
-                                    <a href="#">채용공고 상세검색</a>
+                                    <a href="#">광주</a>
+                                </li>
+                                <li>
+                                    <a href="#">전남</a>
+                                </li>
+                                <li>
+                                    <a href="#">전북</a>
+                                </li>
+                                <li>
+                                    <a href="#">대구</a>
+                                </li>
+                                <li>
+                                    <a href="#">경북</a>
+                                </li>
+                                <li>
+                                    <a href="#">부산</a>
+                                </li>
+                                <li>
+                                    <a href="#">울산</a>
+                                </li>
+                                <li>
+                                    <a href="#">경남</a>
+                                </li>
+                                <li>
+                                    <a href="#">강원</a>
+                                </li>
+                                <li>
+                                    <a href="#">제주</a>
+                                </li>
+                                <li>
+                                    <a href="#">전국</a>
                                 </li>
                             </ul>
-                            <strong>
-                                <a href="#">공채</a>
-                            </strong>
                             <div>
+                                <strong>
+                                    <a href="#">기업별</a>
+                                </strong>
                                 <ul>
                                     <li>
-                                        <a href="#">1000대기업 공채</a>
+                                        <a href="#">대기업</a>
                                     </li>
                                     <li>
-                                        <a href="#">공채예상일정</a>
+                                        <a href="#">중견&#183;강소기업</a>
                                     </li>
                                     <li>
-                                        <a href="#">인턴채용</a>
+                                        <a href="#">외국계기업</a>
                                     </li>
                                     <li>
-                                        <a href="#">공채달력</a>
+                                        <a href="#">공기업&#183;공사</a>
                                     </li>
+                                    <li>
+                                        <a href="#">상장기업</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">TOP100</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">스마트매치</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">채용공고 상세검색</a>
+                                    </li>
+                                </ul>
+                                <strong>
+                                    <a href="#">공채</a>
+                                </strong>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">1000대기업 공채</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">공채예상일정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">인턴채용</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">공채달력</a>
+                                        </li>
+                                </div>
+                                <div class="sideBtmBx">
+                                    <div class="sideLinkType01">
+                                        <a href="#">
+                                            <strong>이직은 원픽</strong>
+                                        </a>
+                                    </div>
+                                    <div class="sideLinkType01">
+                                        <a href="#">
+                                            <strong>슈퍼기업관</strong>
+                                        </a>
+                                    </div>
+                                    <div class="sideLinkType01">
+                                        <a href="#">
+                                            <strong>전문채용관</strong>
+                                    </div>
+                                </div>
+                                <button type="button" class="btnCloseNav spGnb">채용정보 메뉴 닫기</button>
                             </div>
-                            <div class="sideBtmBx">
-                                <div class="sideLinkType01">
-                                    <a href="#">
-                                        <strong>이직은 원픽</strong>
-                                    </a>
-                                </div>
-                                <div class="sideLinkType01">
-                                    <a href="#">
-                                        <strong>슈퍼기업관</strong>
-                                    </a>
-                                </div>
-                                <div class="sideLinkType01">
-                                    <a href="#">
-                                        <strong>전문채용관</strong>
-                                </div>
-                            </div>
-                            <button type="button" class="btnCloseNav spGnb">채용정보 메뉴 닫기</button>
                         </div>
-                    </div>
-                </div>
-
-                <!-- 채용정보 레이어 -->
-                <li>
-                    <a href="https://www.jobkorea.co.kr/starter/" class="linkItem">
-                        <span class="spNav">
-                            <spanclass="txIr">공채정보
-                        </span></span></a>
-
-                    <!-- // 신입공채 레이어 -->
-                    <div class="lyNavArea">
-                        <h3 class="skip">신입공채 세부메뉴</h3>
-                        <div class="lyNavWrap">
-                            <div class="lyNavInner side">
-                                <div class="lyRow row01">
-                                    <div class="lyCol col4">
-                                        <div class="colItem">
-                                            <strong class="titArea">
-                                                <a href="https://www.jobkorea.co.kr/starter"
-                                                    class="tit">공채<span></span></a></strong>
-                                            <div class="listBx">
-                                                <ul>
-                                                    <li>
-                                                        <a href="https://www.jobkorea.co.kr/starter">1000대기업 공채</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.jobkorea.co.kr/starter/calendar">공채달력</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/starter/recruitment_schedule/">공공기관
-                                                            채용일정</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.jobkorea.co.kr/starter/company">기업공채전략</a>
-                                                    </li>
-                                                </ul>
+                    </div> -->
+    
+                    <!-- 채용정보 레이어 -->
+                    <!-- <li>
+                        <a href="https://www.jobkorea.co.kr/starter/" class="linkItem">
+                            <span class="spNav">
+                                <spanclass="txIr">공채정보
+                            </span></span></a> -->
+    
+                        <!-- // 신입공채 레이어 -->
+                        <!-- <div class="lyNavArea">
+                            <h3 class="skip">신입공채 세부메뉴</h3>
+                            <div class="lyNavWrap">
+                                <div class="lyNavInner side">
+                                    <div class="lyRow row01">
+                                        <div class="lyCol col4">
+                                            <div class="colItem">
+                                                <strong class="titArea">
+                                                    <a href="https://www.jobkorea.co.kr/starter"
+                                                        class="tit">공채<span></span></a></strong>
+                                                <div class="listBx">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="https://www.jobkorea.co.kr/starter">1000대기업 공채</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.jobkorea.co.kr/starter/calendar">공채달력</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/starter/recruitment_schedule/">공공기관
+                                                                채용일정</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.jobkorea.co.kr/starter/company">기업공채전략</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sideCol">
+                                        <div class="sideInner">
+                                            <div class="row01">
+                                                <div class="sideList">
+                                                    <ul>
+                                                        <li class="review">
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/Review/Home"><span></span>기업리뷰</a>
+                                                        </li>
+                                                        <li class="inside">
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/starter/companyreport"><span></span>기업분석보고서</a>
+                                                        </li>
+                                                        <li class="interview">
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/starter/interview"><span></span>직무인터뷰</a>
+                                                        </li>
+                                                        <li class="pass">
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/starter/passassay"><span></span>합격자소서</a>
+                                                        </li>
+                                                        <li class="career">
+                                                            <a href="//careerpath.jobkorea.co.kr" target="_blank"
+                                                                title="새창 열림"><span></span>커리어패스</a>
+                                                        </li>
+                                                        <li class="tool"><a
+                                                                href="https://www.jobkorea.co.kr/service/user/tool/spellcheck"><span></span>취업성공툴</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btnCloseNav spGnb">공채 메뉴 닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navItem lyNull theme" id="theme">
+                        <a href="/OnePick/JobList" class="linkItem">
+                            <spanclass="spNav">원픽</span>
+                        </a>
+                    </li>
+                    <li id="gnbHh" class="navItem hh ">
+                        <a href="https://www.jobkorea.co.kr/headhunting/home" class="linkItem"><span>헤드헌팅</span></a> -->
+                        <!-- // 헤드헌팅 레이어 -->
+                        <!-- <div class="lyNavArea">
+                            <h3 class="skip">헤드헌팅 세부메뉴</h3>
+                            <div class="lyNavWrap">
+                                <div class="lyNavInner side">
+                                    <div class="lyRow row01">
+                                        <div class="lyCol col4">
+                                            <div class="colItem">
+                                                <strong class="titArea"><a
+                                                        href="https://www.jobkorea.co.kr/headhunting/home" class="tit"
+                                                        onclick="GA_Event('공통_PC', 'lnb', '헤드헌팅_헤드헌팅 채용정보');">헤드헌팅
+                                                        채용정보<span class="spGnb"></span></a></strong>
+    
+                                                <div class="listBx">
+                                                    <ul>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=3">과장·차장급</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=4">부장급</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=5">임원·CEO</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=2">주임·대리급</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=8">팀장·실장</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.jobkorea.co.kr/headhunting/category?jikgub=10">본부장</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lyCol col4">
+                                            <div class="colItem">
+                                                <strong class="titArea">
+                                                    <a href="#" class="tit devNeedLogin"
+                                                        data-msg="팔로우 헤드헌터는 로그인 후 사용가능 합니다."
+                                                        data-url="https://www.jobkorea.co.kr/headhunting/headhunter/follow">팔로우
+                                                        헤드헌터<span class="spGnb"></span></a>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div class="lyCol col4">
+                                            <div class="colItem">
+                                                <strong class="titArea">
+                                                    <a href="https://www.jobkorea.co.kr/headhunting/headhunter/"
+                                                        class="tit">헤드헌터 찾기<spanclass="spGnb"></span></a></strong>
+                                            </div>
+                                        </div>
+                                        <div class="lyCol col4">
+                                            <div class="colItem">
+                                                <strong class="titArea">
+                                                    <a href="#" class="tit devNeedLogin"
+                                                        data-msg="헤드헌팅 채용상담은 로그인 후 사용가능 합니다."
+                                                        data-url="https://www.jobkorea.co.kr/User/consulting">채용상담
+                                                        <spanclass="spGnb"></span>
+                                                    </a></strong>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sideCol">
-                                    <div class="sideInner">
-                                        <div class="row01">
-                                            <div class="sideList">
-                                                <ul>
-                                                    <li class="review">
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/Review/Home"><span></span>기업리뷰</a>
-                                                    </li>
-                                                    <li class="inside">
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/starter/companyreport"><span></span>기업분석보고서</a>
-                                                    </li>
-                                                    <li class="interview">
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/starter/interview"><span></span>직무인터뷰</a>
-                                                    </li>
-                                                    <li class="pass">
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/starter/passassay"><span></span>합격자소서</a>
-                                                    </li>
-                                                    <li class="career">
-                                                        <a href="//careerpath.jobkorea.co.kr" target="_blank"
-                                                            title="새창 열림"><span></span>커리어패스</a>
-                                                    </li>
-                                                    <li class="tool"><a
-                                                            href="https://www.jobkorea.co.kr/service/user/tool/spellcheck"><span></span>취업성공툴</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="btnCloseNav spGnb">공채 메뉴 닫기</button>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="navItem lyNull theme" id="theme">
-                    <a href="/OnePick/JobList" class="linkItem">
-                        <spanclass="spNav">원픽</span>
-                    </a>
-                </li>
-                <li id="gnbHh" class="navItem hh ">
-                    <a href="https://www.jobkorea.co.kr/headhunting/home" class="linkItem"><span>헤드헌팅</span></a>
-                    <!-- // 헤드헌팅 레이어 -->
-                    <div class="lyNavArea">
-                        <h3 class="skip">헤드헌팅 세부메뉴</h3>
-                        <div class="lyNavWrap">
-                            <div class="lyNavInner side">
-                                <div class="lyRow row01">
-                                    <div class="lyCol col4">
-                                        <div class="colItem">
-                                            <strong class="titArea"><a
-                                                    href="https://www.jobkorea.co.kr/headhunting/home" class="tit"
-                                                    onclick="GA_Event('공통_PC', 'lnb', '헤드헌팅_헤드헌팅 채용정보');">헤드헌팅
-                                                    채용정보<span class="spGnb"></span></a></strong>
-
-                                            <div class="listBx">
-                                                <ul>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=3">과장·차장급</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=4">부장급</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=5">임원·CEO</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=2">주임·대리급</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=8">팀장·실장</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="https://www.jobkorea.co.kr/headhunting/category?jikgub=10">본부장</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="lyCol col4">
-                                        <div class="colItem">
-                                            <strong class="titArea">
-                                                <a href="#" class="tit devNeedLogin"
-                                                    data-msg="팔로우 헤드헌터는 로그인 후 사용가능 합니다."
-                                                    data-url="https://www.jobkorea.co.kr/headhunting/headhunter/follow">팔로우
-                                                    헤드헌터<span class="spGnb"></span></a>
-                                            </strong>
-                                        </div>
-                                    </div>
-                                    <div class="lyCol col4">
-                                        <div class="colItem">
-                                            <strong class="titArea">
-                                                <a href="https://www.jobkorea.co.kr/headhunting/headhunter/"
-                                                    class="tit">헤드헌터 찾기<spanclass="spGnb"></span></a></strong>
-                                        </div>
-                                    </div>
-                                    <div class="lyCol col4">
-                                        <div class="colItem">
-                                            <strong class="titArea">
-                                                <a href="#" class="tit devNeedLogin"
-                                                    data-msg="헤드헌팅 채용상담은 로그인 후 사용가능 합니다."
-                                                    data-url="https://www.jobkorea.co.kr/User/consulting">채용상담
-                                                    <spanclass="spGnb"></span>
-                                                </a></strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-        </header>
-
+                    </li>
+                     -->
+            </header>
+    </div>
 </body>
-
 </html>

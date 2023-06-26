@@ -334,10 +334,16 @@ span.post-txt {
     width: 80%;
     height: 50px;
     line-height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
+
+.tab-menu .tab-menu1 li:first-child {
+    margin-left: 0;
+}
+.tab-menu .tab-menu1 li {
+    position: relative;
+    margin-left: 25px;
+}
+
 
 .tab-menu .tab-menu1 .active {
     font-weight: bold;
@@ -349,7 +355,7 @@ span.post-txt {
 }
 
 .tab-menu .tab-menu2 {
-    width: 35%;
+    width: 30%;
     height: 40px;
     line-height: 40px;
     display: flex;
@@ -360,7 +366,7 @@ span.post-txt {
 .tab-menu2 li {
     width: 80px;
     margin: 5px -10px;
-    border-radius: 20px;
+    border-radius: 100px;
     background-color: rgba(128, 128, 128, 0.5);
     color: #000;
     font-weight: bold;
