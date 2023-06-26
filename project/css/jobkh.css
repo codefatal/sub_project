@@ -30,11 +30,14 @@ a, a:link, a:visited {
     cursor: pointer;
 }
 
+
+/* ===== nav css 시작 =====*/
+/* nav 안 div point 크기 설정 */
 #point {
     background-color: #e2eaf3;
     display: inline-block;
     width: 80vw;
-    height: 500px;
+    height: 420px;
     overflow: hidden;
 }
 
@@ -55,10 +58,12 @@ a, a:link, a:visited {
     overflow: hidden;
 }
 
+/* active 되면 화면 보이게 */
 .tab-cont .active {
     display: flex;
 }
 
+/* active 안되면 화면 안보이게 */
 .tab-cont:not(.active) {
     display: none;
 }
@@ -67,6 +72,7 @@ a, a:link, a:visited {
     display: flex;
     height: 400px;
 }
+
 /* Swiper 슬라이더 스타일 */
 .swiper-container {
     width: 100%;
@@ -134,6 +140,7 @@ a, a:link, a:visited {
     overflow: hidden;
 }
 
+/* 세로 2배 박스 */
 div.box-double {
     position: relative;
     width: 220px;
@@ -146,6 +153,7 @@ div.box-double {
     overflow: hidden;
 }
 
+/* 세로 2배 박스 이미지용 */
 div.box-img {
     position: relative;
     width: 220px;
@@ -274,6 +282,9 @@ span.cate {
     height: 50%;
     font-size: 15px;
     font-weight: bold;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
     margin: 5px;
     padding: 5px;
 }
@@ -340,7 +351,7 @@ span.post-txt {
 /* 메뉴 버튼 */
 .tab-menu {
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 50px;
     justify-content: space-between;
 }
@@ -351,25 +362,50 @@ span.post-txt {
     align-items: flex-start;
 }
 
-.tab-menu1 {
+.tab-menu .tab-menu1 {
     width: 80%;
+    height: 50px;
     line-height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.tab-menu1 .active {
+.tab-menu .tab-menu1 .active {
     font-weight: bold;
     text-decoration: underline;
 }
 
-.tab-menu2 {
-    width: 20%;
-    line-height: 50px;
+.tab-menu .tab-menu1:not(.active) {
+    display: none;
+}
+
+.tab-menu .tab-menu2 {
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.tab-menu2 li {
+    width: 80px;
+    margin: 5px -10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: gray;
+    color: #000;
+}
+
+.tab-menu2 a {
+    color: #fff;
+}
+
+.tab-menu2 .active {
+    background-color: #00f;
+    color: #fff;
+    z-index: 10;
 }
 
 div.noti-slide {
@@ -416,6 +452,7 @@ div.tool {
     width: 400px; /* 원하는 너비 설정 */
 }
 
+/* 취업 성공 툴 메뉴 그리드로 2x2 묶음 */
 ul.menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2개의 열로 구성 */
@@ -423,6 +460,7 @@ ul.menu {
     gap: 10px; /* 아이템 간의 간격 설정 */
 }
 
+/* 취업 성공 툴 메뉴 화면 표기 */
 li.menu-item {
     height: 30px; /* 원하는 높이 설정 */
     background-color: #fff; /* 랜덤한 색상을 위해 이 부분은 JavaScript로 처리할 수 있습니다. */
@@ -439,9 +477,9 @@ li.menu-item a {
     text-decoration: none; /* 링크 밑줄 제거 */
 }
 
-
+/* 추천 서비스 스크롤 기능 추가 */
 div.blind {
-    max-height: 150px; /* 원하는 높이 설정 */
+    max-height: 110px; /* 원하는 높이 설정 */
     overflow-y: scroll; /* 세로 스크롤 표시 */
 }
 
@@ -453,8 +491,26 @@ div.blind {
     background-color: #fff;
 }
 
+.service-box .tit {
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+div.blind p {
+    margin: 5px;
+    padding: 5px;
+}
+
 div.blind a {
     border: 1px solid #000;
     border-radius: 8px;
     padding: 5px;
 }
+
+/* 이직은 원픽 테두리 수정 */
+div.blind .onpick {
+    border: 2px solid yellowgreen;
+}
+
+/* ===== nav css 끝 =====*/
