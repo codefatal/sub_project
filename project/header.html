@@ -7,7 +7,7 @@
     <title>Header</title>
     <!-- [5] layout 영역 -->
     <link rel="stylesheet" href="css/jobkh_layout.css">
-    <!-- [6] header 영역 -->a\
+    <!-- [6] header 영역 -->
     <link rel="stylesheet" href="css/jobkh_header.css">
     <!-- [7] nav 영역 -->
     <link rel="stylesheet" href="css/jobkh_nav.css">
@@ -41,6 +41,7 @@
 
             $('.btnAllService').click(function() {
                 $('.allArea').toggleClass("active");
+                $('.jkNavDimm').toggleClass("on");
             })
         });
     </script>
@@ -645,7 +646,58 @@
                     </div>
                 </div>
             </div>
+            <div class="jkNavDimm"></div>
+            <div id="banner-area">
+                <div class="bnr-big">
+                    
+                </div>
+                <div class="bnr-service">
+                    <div class="swiper-container bnr-swiper swiper-container-initialized swiper-container-horizontal">
+                        <ul class="swiper-wrapper" style="transform: translate3d(-856px, 0px, 0px); transition-duration: 0ms;">
+                            <li class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 214px;">
+                                <a href="/top100" target="_blank">
+                                    <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner1.png" alt="">
+                                </a>
+                            </li>
+                            <li class="swiper-slide" data-swiper-slide-index="1" style="width: 214px;">
+                                <a href="/User/Qstn/Index" target="_blank">
+                                    <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner2.png" alt="">
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 214px;">
+                                <a href="/Review/MyReview" target="_blank">
+                                    <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner3.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        <div class="btn-control">
+                            <div class="bnrs-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                            <div class="bnrs-next" tabindex="0" role="button" aria-label="Next slide"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bnr-marketing">
+
+                </div> 
+            </div>
         </header>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.bnr-swiper', {
+            direction: 'horizontal',
+            centeredSlides: true,
+            watchOverflow : true,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".bnrs-next",
+                prevEl: ".bnrs-prev",
+            },
+            observer: true,
+            observeParents: true,
+        });
+    </script>
 </body>
 </html>
