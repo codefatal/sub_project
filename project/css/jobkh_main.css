@@ -1,13 +1,12 @@
+/*전체wrap*/
 #content {
     overflow: hidden;
   }
+  /*즉시지원 버튼, 스크랩 버튼*/
   #applyscrap button {
     margin-right: 30px;
   }
-
-  .game {
-    display: inline-flex;
-  }
+  /*채용정보 스크랩(별모양 버튼) 사이즈,색*/
   .scrap {
     color: rgba(128, 128, 128, 0);
     border: 1;
@@ -17,10 +16,12 @@
     width: 25px;
     height: 25px;
   }
+  /*지원기간 표시 (글씨 크기)*/
   .applydate {
     display: inline;
     font-size: 8px;
   }
+  /*즉시지원 버튼*/
   .applynow {
     color: coral;
     border-color: coral;
@@ -31,9 +32,11 @@
     border-radius: 8px;
     background-color: rgb(255, 238, 231);
   }
+  /*불렛포인트 제거*/
   li {
     list-style: none;
   }
+  /*메인페이지 채용공고 4개씩*/
   .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -42,6 +45,7 @@
     padding: 10px;
     height: 650px;
   }
+  /*채용공고 칸*/
   .grid-container > li {
     background-color: rgba(255, 235, 205, 0);
     border: 1px solid black;
@@ -49,7 +53,7 @@
     font-size: 20px;
     border-radius: 12px;
   }
-
+/*채용공고 사이 이미지배너 4개짜리 한줄에 표시*/
   .imagebanner {
     width: 100%;
     display: flex;
@@ -57,23 +61,22 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  /*채용공고 내 즉시지원, 지원기간, 스크랩 버튼 일렬로 표시*/
   #applyscrap {
     display: flex;
     justify-content: space-between;
   }
+  /*채용공고 채용관 이름, 상품안내(더보기) 한줄표시*/
   .bannerwrap {
     display: flex;
     justify-content: space-between;
   }
+  /*상품안내 버튼*/
   .bannerwrap button {
     background-color: rgba(128, 128, 128, 0);
     border: none;
   }
-  .fa .fa-star {
-    font-size: 10px;
-    height: 10px;
-    width: 10px;
-  } 
+  /*상품안내 버튼 밑줄표시*/ 
   .viewmore{
     text-decoration: underline;
   }
