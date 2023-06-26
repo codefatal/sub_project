@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>실습</title>
+    <title>KH Job!</title>
     <!-- [1] 해상도 - 최적해상도 1260 결정 -->
     <!-- [2] content 영역 1040px 80vw 90% 배치(center) -->
     <!-- [3] reset.css 폴더경로 -->
@@ -94,8 +94,8 @@
             $.ajax({
                 url : "header.html",
                 success : function(result) {
-                    var navrefine = $(".wrap.nav").html(result).find('nav');
-                    $('.wrap.nav').html(navrefine);
+                    var headerrefine = $(".wrap.header").html(result).find('header');
+                    $('.wrap.header').html(headerrefine);
                 }
             });
             $.ajax({
@@ -115,8 +115,8 @@
             $.ajax({
                 url : "footer.html",
                 success : function(result) {
-                    var contentrefine = $(".wrap.content").html(result).find('main');
-                    $('.wrap.content').html(contentrefine);
+                    var footerrefine = $(".wrap.footer").html(result).find('footer');
+                    $('.wrap.footer').html(footerrefine);
                 }
             });
         });

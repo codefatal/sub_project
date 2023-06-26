@@ -2,7 +2,7 @@
 /* nav 안 div point 크기 설정 */
 #point {
     background-color: #e2eaf3;
-    display: inline-block;
+    display: flex;
     width: 1260px;
     height: 420px;
     overflow: hidden;
@@ -11,18 +11,12 @@
 /* nav 왼쪽 */
 #point .point-left {
     width: 70%;
-    float: left;
 }
 
 /* nav 오른쪽 */
 #point .point-right {
     width: 30%;
-    float: left;
     padding: 10px;
-}
-
-.tab-cont {
-    overflow: hidden;
 }
 
 /* active 되면 화면 보이게 */
@@ -87,6 +81,7 @@
 /* 박스 저장 공간 */
 #point .box-lst {
     display: flex;
+    width: 95%;
     height: 100%;
     margin: 10px;
     text-align: left;
@@ -96,7 +91,7 @@
 /* 박스 크기 */
 #point .box-lst .box {
     position: relative;
-    width: 220px;
+    width: 200px;
     height: 165px;
     box-sizing: border-box;
     border: 1px solid #fff;
@@ -110,8 +105,8 @@
 /* 세로 2배 박스 */
 div.box-double {
     position: relative;
-    width: 220px;
-    height: 330px;
+    width: 200px;
+    height: 335px;
     box-sizing: border-box;
     background-color: #fff;
     margin: 5px;
@@ -122,13 +117,13 @@ div.box-double {
 
 /* 세로 2배 박스 이미지용 */
 div.box-img {
-    position: relative;
-    width: 220px;
-    height: 330px;
+    width: 200px;
+    height: 335px;
     box-sizing: border-box;
     background-color: #fff;
     margin: 5px;
     border-radius: 8px;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -307,14 +302,6 @@ span.post-txt {
     text-overflow: ellipsis;
 }
 
-/* 이미지 규격 */
-.box-lst li > img {
-    border: 1px solid #000;
-    border-radius: 8px;
-    margin: 0;
-    padding: 0;
-}
-
 /* 메뉴 버튼 */
 .tab-menu {
     display: flex;
@@ -399,9 +386,12 @@ div.noti-slide {
 }
 
 .notice-wrap > .tit {
-    width: 10%;
+    width: 15%;
 }
 
+ul.noti-ul {
+    padding: 0 5px;
+}
 
 /* 스와이퍼 슬라이더 스타일 */
 /* 공지 스와이퍼 기능 */
@@ -422,7 +412,10 @@ div.tool {
 /* 취업 성공 툴 메뉴 그리드로 2x2 묶음 */
 ul.menu {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열로 구성 */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(2, 40%); /* 2개의 열로 구성 */
     grid-template-rows: repeat(2, auto); /* 2개의 행으로 구성 */
     gap: 10px; /* 아이템 간의 간격 설정 */
 }
