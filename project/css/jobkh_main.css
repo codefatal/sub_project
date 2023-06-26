@@ -15,6 +15,7 @@
     overflow: hidden;
     width: 25px;
     height: 25px;
+    
   }
   /*지원기간 표시 (글씨 크기)*/
   .applydate {
@@ -80,3 +81,11 @@
   .viewmore{
     text-decoration: underline;
   }
+  /*슬라이더 버튼*/
+  .sliderbutton > div > button{
+    border-radius: 50px;
+    height: 100px;
+    background-color: white;
+  
+  }
+  
