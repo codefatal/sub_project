@@ -22,17 +22,57 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- jQuery 스크립트 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/project/css/reset.css">
+    <style>
+        header {
+            position: relative;
+            height: 90px;
+        }
+
+        header>.logo {
+            position: absolute;
+            top: 20px;
+            left: 0;
+        }
+
+        .search{
+
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <!--채용상담-->
+        <div class="logo">
+            <img src="https://dummyimage.com/50x50/e3e6c8/000.jpg&text=kh" width="120" height="50">
+        </div>
         <div class="search">
-            <h2 class="">검색</h2>
+            <input type="text" placeholder="NEW JOB, NEW ME">
+        </div>
+        <div class="main-menu">
+            <ul>    
+                <li>로그인</li>
+                <li>회원가입</li>
+                <li>기업서비스</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="search">
+            <h2 class="search">검색</h2>
             <form action="">
                 <fieldset>
                     <legend>Smart Match 통합검색</legend>
-                    <div class="">
+                    <div class="search_a">
                         <input type="text" id="text" title="검색어 입력" name="ktext" placeholder="NEW JOB, NEW ME"
                             maxlength="50">
                     </div>
