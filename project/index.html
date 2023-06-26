@@ -33,7 +33,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- nav active 별 스크립트 구성 -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function(e) {
             $(".person-tab li").click(function() {
                 // 모든 person-tab 항목에서 active 클래스를 제거합니다.
                 $(".person-tab li").removeClass("active");
@@ -91,6 +91,7 @@
                     $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
             });
 
+            // html 파일 불러오기
             $.ajax({
                 url : "header.html",
                 success : function(result) {
