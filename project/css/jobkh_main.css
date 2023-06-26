@@ -1,0 +1,76 @@
+#content {
+    overflow: hidden;
+  }
+  #applyscrap button {
+    margin-right: 30px;
+  }
+
+  .game {
+    display: inline-flex;
+  }
+  .scrap {
+    color: rgba(128, 128, 128, 0);
+    border: 1;
+    border-color: rgba(255, 235, 205, 0.5);
+    background-color: rgba(255, 235, 204, 0);
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+  }
+  .applydate {
+    display: inline;
+    font-size: 8px;
+  }
+  .applynow {
+    color: coral;
+    border-color: coral;
+    height: 20px;
+    width: 60px;
+    font-size: 8pt;
+    font-style: bold;
+    border-radius: 8px;
+    background-color: rgb(255, 238, 231);
+  }
+  li {
+    list-style: none;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: rgba(33, 150, 243, 0);
+    padding: 10px;
+    height: 650px;
+  }
+  .grid-container > li {
+    background-color: rgba(255, 235, 205, 0);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+
+  .imagebanner {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #applyscrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bannerwrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bannerwrap button {
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+  }
+  .fa .fa-star {
+    font-size: 10px;
+    height: 10px;
+    width: 10px;
+  }

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.wrap.header {
+    background: yellowgreen;
+}
+.wrap.nav {
+    background: #fff;
+}
+.wrap.content {
+    background: blanchedalmond;
+}
+.wrap.footer {
+    background: aquamarine;
+}
+
+header, nav, #content, footer {
+    /* 중앙 정렬 방식 */
+    width: 1260px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+a, a:link, a:visited {
+    color: #494949;
+    text-decoration: none;
+    cursor: pointer;
+}
