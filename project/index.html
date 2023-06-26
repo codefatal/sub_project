@@ -32,7 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- nav active 별 스크립트 구성 -->
     <script>
-        $(document).ready(function(e) {
+        $(document).ready(function() {
             $(".person-tab li").click(function() {
                 // 모든 person-tab 항목에서 active 클래스를 제거합니다.
                 $(".person-tab li").removeClass("active");
@@ -138,7 +138,21 @@
     <!-- swiper 스크립트 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- swiper 기능 스크립트 -->
-    <script>
+    <!-- <script>
+        var swiper = new Swiper('.bnr-swiper', {
+            direction: 'horizontal',
+            centeredSlides: true,
+            watchOverflow : true,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".bnrs-next",
+                prevEl: ".bnrs-prev",
+            },
+            observer: true,
+            observeParents: true,
+        });
+
         var swiper = new Swiper('.sw-container', {
             direction: 'horizontal',
             // spaceBetween: 50,
@@ -162,6 +176,6 @@
                 disableOnInteraction: false
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
