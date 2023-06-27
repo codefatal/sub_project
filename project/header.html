@@ -45,8 +45,38 @@
             })
 
             $('#gnbGi').hover(function() {
-                $('#gnbGi').toggleClass("open");
-                $('.jkNavDimm-hover').toggleClass("on");
+                if(!$('.allArea').hasClass("active")) {
+                    $('#gnbGi').toggleClass("open");
+                    $('.jkNavDimm-hover').toggleClass("on");
+                }
+            })
+
+            $('#gnbStart').hover(function() {
+                if(!$('.allArea').hasClass("active")) {
+                    $('#gnbStart').toggleClass("open");
+                    $('.jkNavDimm-hover').toggleClass("on");
+                }
+            })
+
+            $('#gnbHh').hover(function() {
+                if(!$('.allArea').hasClass("active")) {
+                    $('#gnbHh').toggleClass("open");
+                    $('.jkNavDimm-hover').toggleClass("on");
+                }
+            })
+
+            $('#gnbSalary').hover(function() {
+                if(!$('.allArea').hasClass("active")) {
+                    $('#gnbSalary').toggleClass("open");
+                    $('.jkNavDimm-hover').toggleClass("on");
+                }
+            })
+
+            $('#futurelab').hover(function() {
+                if(!$('.allArea').hasClass("active")) {
+                    $('#futurelab').toggleClass("open");
+                    $('.jkNavDimm-hover').toggleClass("on");
+                }
             })
         });
     </script>
@@ -414,7 +444,7 @@
                                 <!-- 신입공채 레이어 // -->
                             </li>
                             <li class="navItem lyNull theme" id="theme">
-                                <a href="/OnePick/JobList" class="linkItem"><span class="spNav">원픽</span></a>
+                                <a href="https://www.jobkorea.co.kr/OnePick/JobList" class="linkItem"><span class="spNav"><span class="txIr">원픽</span></span></a>
                             </li>
                             <li id="gnbHh" class="navItem hh">
                                 <a href="https://www.jobkorea.co.kr/headhunting/home" class="linkItem"><span class="spNav"><span class="txIr">헤드헌팅</span></span></a>
@@ -617,29 +647,29 @@
                         <ul id="devMyPage" class="userNav">
                             <ul class="userNav">
                                 <li class="userNav-item login">
-                                    <a href="/Login/Login_Tot.asp?rDBName=GG&amp;re_url=/" class="txt-button login-button">로그인</a>
+                                    <a href="https://www.jobkorea.co.kr/Login/Login_Tot.asp?rDBName=GG&amp;re_url=/" class="txt-button login-button">로그인</a>
                                 </li>
                                 <li class="userNav-item join">
-                                    <a href="/Join/M_Regist" class="txt-button join-button">회원가입</a>
+                                    <a href="https://www.jobkorea.co.kr/Join/M_Regist" class="txt-button join-button">회원가입</a>
                                 </li>
                                 <li class="userNav-item corp">
-                                    <a href="/Corp/Index" target="_blank"><span class="spGnb">기업서비스</span></a>
+                                    <a href="https://www.jobkorea.co.kr/Corp/Index" target="_blank"><span class="spGnb">기업서비스</span></a>
                                     <div class="lyMyArea">
                                         <div class="myInner">
                                             <div class="lyRow">
                                                 <div class="btnRowWrap">
-                                                    <a href="/Login/Login_Tot.asp?rDBName=GI">기업회원 로그인</a>
+                                                    <a href="https://www.jobkorea.co.kr/Login/Login_Tot.asp?rDBName=GI">기업회원 로그인</a>
                                                 </div>
                                             </div>
                                             <div class="myLists">
                                                 <ul>
-                                                    <li><a href="/Corp/Main"><span class="tx">기업회원 홈</span></a></li>
-                                                    <li><a href="/Yocruit/Mng/GI_Reg"><span class="tx">채용공고 등록</span></a></li>
-                                                    <li><a href="/Corp/GiMng/List""><span class="tx">공고·지원자 관리</span></a></li>
-                                                    <li><a href="/Corp/Person/Find"><span class="tx">인재검색 관리</span></a></li>
-                                                    <li><a href="/OnePick/Intro"><span class="tx">원픽 서비스 이용</span></a></li>
-                                                    <li><a href="/service/company/option"><span class="tx">기업회원 서비스 안내</span></a></li>
-                                                    <li><a href="/service/headhunting/platinum"><span class="tx">서치펌 서비스 안내</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/Corp/Main"><span class="tx">기업회원 홈</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/Yocruit/Mng/GI_Reg"><span class="tx">채용공고 등록</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/Corp/GiMng/List""><span class="tx">공고·지원자 관리</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/Corp/Person/Find"><span class="tx">인재검색 관리</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/OnePick/Intro"><span class="tx">원픽 서비스 이용</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/service/company/option"><span class="tx">기업회원 서비스 안내</span></a></li>
+                                                    <li><a href="https://www.jobkorea.co.kr/service/headhunting/platinum"><span class="tx">서치펌 서비스 안내</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>
