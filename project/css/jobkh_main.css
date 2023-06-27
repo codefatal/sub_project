@@ -44,7 +44,7 @@
     gap: 10px;
     background-color: rgba(33, 150, 243, 0);
     padding: 10px;
-    height: 650px;
+    height: 500px;
   }
   /*채용공고 칸*/
   .grid-container > li {
@@ -88,4 +88,52 @@
     background-color: white;
   
   }
+
+.bannerwrap h4 {
+    margin-bottom: 10px;
+    line-height: 26px;
+    color: #171717;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.grid-container div img {
+  width: 180px;
+  height: 72px;
+}
   
+.sliderwrap .carousel-control-next-icon {
+  right: -8px;
+  background-image: url(../images/next_middle.svg);
+}
+
+.sliderwrap .carousel-control-prev-icon {
+  left: -8px;
+  background-image: url(../images/prev_middle.svg);
+}
+
+.sliderwrap {
+  background-color: rgba(226,234,243,.5);
+
+}
+
+.flow_banner_box {
+  padding-top: 15px;
+}
+
+.sliderwrap .carousel-control-next, 
+.sliderwrap .carousel-control-prev {
+  width: 5%;
+}
+
+.flow_banner_box ul li {
+  margin-left: 30px;
+
+}
+
+.grid-container li {
+  box-sizing: border-box;
+  width: 300px;
+  height: 247px;
+}
