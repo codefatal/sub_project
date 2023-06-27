@@ -580,7 +580,6 @@ header .lyNavArea .lyNavWrap .titArea .tit .spGnb {
     background-position: -140px -32px;
     margin-left: 9px;
     vertical-align: 0;
-    background: url(../images/sp_gnb.png) -140px -32px no-repeat;
 }
 
 header .lyNavArea .lyNavWrap .titArea .tit.beta, 
@@ -744,6 +743,9 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
     position: relative;
 }
 
+<<<<<<< HEAD
+.jkNavDimm {
+=======
 /* 전체보기 클릭 시 전체보기 메뉴 아래 화면 어둡게 */
 .jkNavDimm-click.on {
     display: block !important;
@@ -751,6 +753,7 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
 
 /* 전체보기 누르기전 설정 */
 .jkNavDimm-click {
+>>>>>>> 3ca93793bb01828faa13f4c64d35ea48bee138d2
     display: none;
     position: fixed;
     top: 500px;
