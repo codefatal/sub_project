@@ -177,7 +177,123 @@
   display: inline;
   font-size: 13px;
 }
-
+/*그리드 호버~*/
 .grid-container li:hover {
 		transform: translate(0, -10px);
+  }
+
+
+
+
+  /*게임분야 채용정보 */
+
+
+
+  /*게임분야 채용정보 틀*/
+  .l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .company {
+    position: relative;
+    height: 70px;
+    margin-bottom: 25px;
+    padding: 17px 0 0 14px;
+    background-color: #000;
+    color: #fff;
+    line-height: 1;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 700;
+  }
+/*1번 채용공고칸 백이미지*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .company.bg1 {
+  background: #837d6d url(https://i.jobkorea.kr/content/images/main/bg-gamejob1.jpg?2019012914) no-repeat 0 0;
+}
+/*2번 채용공고칸 백이미지*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .company.bg2 {
+  background: #837d6d url(https://i.jobkorea.kr/content/images/main/bg-gamejob2.jpg?2019012914) no-repeat 0 0;
+}
+/*3번 채용공고칸 백이미지*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .company.bg3 {
+  background: #837d6d url(https://i.jobkorea.kr/content/images/main/bg-gamejob3.jpg?2019012914) no-repeat 0 0;
+}
+/*4번 채용공고칸 백이미지*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .company.bg4 {
+  background: #837d6d url(https://i.jobkorea.kr/content/images/main/bg-gamejob4.jpg?2019012914) no-repeat 0 0;
+}
+/*게임 채용정보 칸*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item ul {
+  overflow: hidden;
+  position: relative;
+  height: 70px;
+  box-sizing: border-box;
+  padding-bottom: 6px;
+  margin: 0 15px;
+  text-align: left;
+  border-bottom: 1px solid #e9eaec;
+}
+/*게임 채용정보 한 줄*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item li {
+  position: relative;
+  margin-bottom: 4px;
+  padding-left: 4px;
+  font-size: 13px;
+  text-align: left;
+}
+/*게임분야 채용공고 전체 칸*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 306px;
+  height: 206px;
+  margin-right: 12px;
+  border: 1px solid #c8cbd0;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+}
+
+/*게임 채용공고 맨 밑에 칸*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .extra {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 37px;
+  padding: 0 18px;
+  height: 39px;
+  line-height: 39px;
+  font-size: 13px;
+}
+/*로고사진*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .item .logo {
+  z-index: 10;
+  position: absolute;
+  left: 28px;
+  top: 58px;
+}
+/*게임분야 채용공고 전체 칸*/
+.l-wrap-bottom.l-gamejob-wrap .l-gamejob .list {
+  overflow: hidden;
+  position: relative;
+  width: 1330px;
+  padding: 0;
+}
+/*게임분야 채용 정보 제목 텍스트*/
+.l-wrap-bottom h3.header {
+  margin-bottom: 13px;
+  line-height: 1.445;
+  letter-spacing: -1px;
+  color: #171717;
+  font-size: 18px;
+}
+/*채용광고 더보기*/
+.l-wrap-bottom .btn_more_header {
+  right: 0;
+  top: 4px;
+  color: #6a6a6a;
+  font-size: 14px;
+}
+.skip{
+  font-size: 0;
 }
