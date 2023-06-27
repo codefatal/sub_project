@@ -164,7 +164,7 @@ header .headInner .headBann .headBannBtns button.btnBannPrev:before {
     display: block;
     width: 5px;
     height: 8px;
-    background-image: url(../images/left_mini.svg);
+    background-image: url(../images/prev_mini.svg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -486,6 +486,10 @@ header .headNavBar .jkNavArea .serviceNav {
     display: flex;
 }
 
+header .headNavBar .jkNavArea .serviceNav {
+    margin-bottom: 10px;
+}
+
 header .headNavBar .jkNavArea {
     width: 100%;
     margin: -1px 0 0 -1px;
@@ -724,6 +728,11 @@ header .headNavBar .navInner:after {
     height: 90px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+#banner-area .bnr-big > a img,
+#banner-area .bnr-marketing > a img {
+    margin: 0;
 }
 
 #banner-area > div {
