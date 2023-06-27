@@ -358,7 +358,6 @@ header .lyNavArea .lyNavWrap .titArea .tit .spGnb {
     background-position: -140px -32px;
     margin-left: 9px;
     vertical-align: 0;
-    background: url(../images/sp_gnb.png) -140px -32px no-repeat;
 }
 
 header .lyNavArea .lyNavWrap .titArea .tit.beta, #headerWrap .lyNavArea .lyNavWrap .titArea .tit.beta .spGnb {
@@ -495,11 +494,6 @@ header .headNavBar .jkNavArea {
 header .headNavBar .jkNavArea .navItem.theme,
 header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
     position: relative;
-}
-
-/* 화면 어둡게 */
-.jkNavDimm.on {
-    display: block !important;
 }
 
 .jkNavDimm {
