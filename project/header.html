@@ -41,13 +41,18 @@
 
             $('.btnAllService').click(function() {
                 $('.allArea').toggleClass("active");
-                $('.jkNavDimm').toggleClass("on");
+                $('.jkNavDimm-click').toggleClass("on");
+            })
+
+            $('#gnbGi').hover(function() {
+                $('#gnbGi').toggleClass("open");
+                $('.jkNavDimm-hover').toggleClass("on");
             })
         });
     </script>
 </head>
 <body>
-    <div class="wrap header">
+    <div class="wrap">
         <header>
             <!-- // headerInner -->
             <div class="headInner">
@@ -646,15 +651,12 @@
                     </div>
                 </div>
             </div>
-            <div class="jkNavDimm"></div>
             <div id="banner-area">
-                <div class="bnr-big">
-                    
-                </div>
+                <div class="bnr-big"><a href="https://yellow.contentsfeed.com/RealMedia/ads/click_lx.ads/jobkorea/main/L13/1511508775/Top3/jobkorea/230623_voxelmaps_mb_s/230623_voxelmaps_mb.html/41643134773253614c45454143467172" target="_blank"><img src="//apple.contentsfeed.com/RealMedia/ads/Creatives/jobkorea/230623_voxelmaps_mb_s/230626_voxelmaps_75090.png" alt="대체텍스트"></a></div>
                 <div class="bnr-service">
-                    <div class="swiper-container bnr-swiper swiper-container-initialized swiper-container-horizontal">
-                        <ul class="swiper-wrapper" style="transform: translate3d(-856px, 0px, 0px); transition-duration: 0ms;">
-                            <li class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 214px;">
+                    <div class="swiper-container bnr-swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide" data-swiper-slide-index="2" style="width: 214px;">
                                 <a href="/top100" target="_blank">
                                     <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner1.png" alt="">
                                 </a>
@@ -664,7 +666,7 @@
                                     <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner2.png" alt="">
                                 </a>
                             </li>
-                            <li class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 214px;">
+                            <li class="swiper-slide" data-swiper-slide-index="0" style="width: 214px;">
                                 <a href="/Review/MyReview" target="_blank">
                                     <img src="//i.jobkorea.kr/content/images/personal/main/sv-banner3.png" alt="">
                                 </a>
@@ -677,10 +679,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="bnr-marketing">
-
-                </div> 
+                <div class="bnr-marketing"><a href="https://yellow.contentsfeed.com/RealMedia/ads/click_lx.ads/jobkorea/main/L13/392175146/Right3/jobkorea/230421_jnshipjump_mr_s/230413_jklotte_mr.html/41643134773253614c45454143545249" target="_blank"><img src="//apple.contentsfeed.com/RealMedia/ads/Creatives/jobkorea/230421_jnshipjump_mr_s/230510_jnshipjump_260_90.png" border="0" alt="전남조선업도약센터 "></a></div>
             </div>
+            <div class="jkNavDimm-click"></div>
+            <div class="jkNavDimm-hover"></div>
         </header>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -3,7 +3,6 @@
 }
 
 .wrap {
-    border: 1px solid black;
     box-sizing: border-box;
 }
 .wrap.header {
@@ -13,10 +12,10 @@
     background: #fff;
 }
 .wrap.content {
-    background: blanchedalmond;
+    background: #fff;
 }
 .wrap.footer {
-    background: aquamarine;
+    background: #fff;
 }
 
 header, nav, #content, footer {

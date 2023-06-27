@@ -1,3 +1,10 @@
+/* 헤더 크기 설정 */
+header {
+    position: relative;
+    z-index: 2000;
+    font-family: 'Pretendard Variable', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif';
+}
+
 header .headInner, 
 header .headNavBar .navInner, 
 header .lyNavWrap {
@@ -5,6 +12,7 @@ header .lyNavWrap {
     min-width: 1260px;
 }
 
+/* 헤더 로고 및 검색창 부분 */
 header .headInner {
     padding-top: 32px;
     padding-bottom: 6px;
@@ -16,10 +24,12 @@ header .headInner {
     justify-content: flex-start;
 }
 
+/* 로고 마진 0 */
 .jkLogo {
     margin: 0;
 }
 
+/* 로고 안 a 옵션 설정 */
 .jkLogo a {
     display: block;
     font-size: 0;
@@ -28,6 +38,7 @@ header .headInner {
     margin-right: 19px;
 }
 
+/* a after로 이미지 호출 */
 .jkLogo a:after {
     content: "";
     display: block;
@@ -39,6 +50,7 @@ header .headInner {
     background-size: 143px 25px;
 }
 
+/* 소스상에서만 보이는 텍스트 */
 header legend {
     position: absolute;
     top: -9999px;
@@ -47,6 +59,7 @@ header legend {
     line-height: 0;
 }
 
+/* 헤더 검색창 설정 */
 header .search {
     box-sizing: border-box;
     width: 440px;
@@ -58,6 +71,7 @@ header .search {
     background-color: #fff;
 }
 
+/* 소스상에서만 보이는 텍스트 */
 header .skip {
     position: absolute;
     overflow: hidden;
@@ -67,11 +81,13 @@ header .skip {
     margin: -1px;
 }
 
+/* 헤더 검색창 설정 */
 header .search fieldset .smKey {
     position: relative;
     border-radius: 60px;
 }
 
+/* 검색창 안 텍스트 설정 */
 header .search fieldset .smKey input#stext {
     border: 0;
     width: 100%;
@@ -84,6 +100,7 @@ header .search fieldset .smKey input#stext {
     background: rgba(0,0,0,0);
 }
 
+/* 검색 버튼 설정 및 이미지 호출 */
 header .search fieldset .smKey input.submit {
     width: 44px;
     height: 36px;
@@ -101,6 +118,7 @@ header .search fieldset .smKey input.submit {
     background-color: rgba(0,0,0,0);
 }
 
+/* 상세검색 설정 */
 header .headInner .subSchArea {
     display: flex;
 }
@@ -109,6 +127,7 @@ header .headInner .subSchLink {
     margin-left: 8px;
 }
 
+/* 상세검색 창 버튼 설정 */
 header .headInner .subSchLink .linkItem {
     position: relative;
     display: block;
@@ -122,6 +141,7 @@ header .headInner .subSchLink .linkItem {
     box-sizing: border-box;
 }
 
+/* 상세검색 버튼 이름 설정 */
 header .headInner .subSchLink .linkItem .spNav {
     font-size: 13px;
     font-weight: 500;
@@ -130,6 +150,7 @@ header .headInner .subSchLink .linkItem .spNav {
     color: #6a6a6a;
 }
 
+/* 헤더 우측 상단 배너 영역 설정 */
 header .headInner .headBann {
     margin-left: auto;
     flex-direction: row-reverse;
@@ -145,6 +166,7 @@ header .headInner .headBann .headBannBtns {
     flex-direction: row;
 }
 
+/* 헤더 우측 상단 배너 버튼 설정 */
 header .headInner .headBann .headBannBtns button {
     display: flex;
     justify-content: center;
@@ -164,7 +186,7 @@ header .headInner .headBann .headBannBtns button.btnBannPrev:before {
     display: block;
     width: 5px;
     height: 8px;
-    background-image: url(../images/left_mini.svg);
+    background-image: url(../images/prev_mini.svg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -193,6 +215,7 @@ header .headInner .headBann .headBannBtns button.btnBannNext {
     border-bottom-right-radius: 60px;
 }
 
+/* 배너 이미지 설정 및 크기 조정 */
 header .headInner .headBann .bannBx {
     width: 106px;
     height: 30px;
@@ -250,6 +273,7 @@ header .headInner .headBann .bannBx .bann-logo:after {
     background-size: cover;
 }
 
+/* 전체 보기 클릭 시 내용 설정 */
 header .headNavBar, 
 header .headNavBar .navInner {
     display: flex;
@@ -267,6 +291,7 @@ header .headNavBar {
     margin: 0 auto;
 }
 
+/* active 시 전체보기 화면이 보이도록 설정 */
 header .headNavBar .active {
     overflow: visible;
 }
@@ -275,6 +300,7 @@ header .headNavBar .allArea {
     width: 38px;
     height: 64px;
 }
+
 
 header .headNavBar .allArea .btnAllService {
     position: relative;
@@ -292,6 +318,7 @@ header .headNavBar .allArea .btnAllService .spGnb {
     display: block;
 }
 
+/* 전체 보기 버튼 설정 */
 header .headNavBar .allArea .btnAllService .menu-ham {
     position: relative;
     height: 24px;
@@ -301,6 +328,7 @@ header .headNavBar .allArea .btnAllService .menu-ham {
     text-indent: 0;
 }
 
+/* 버튼 클릭 시 이미지가 변화되는 설정 */
 header .headNavBar .allArea.active .btnAllService .menu-ham svg .line1 {
     transform: rotate(45deg);
     transform-origin: top left;
@@ -315,10 +343,12 @@ header .headNavBar .allArea.active .btnAllService .menu-ham svg .line3 {
     transform-origin: bottom left;
 }
 
+/* 버튼 이미지가 변화되는 속도 설정 */
 header .headNavBar .allArea .btnAllService .menu-ham svg path {
     transition: all .4s;
 }
 
+/* 전체보기 메뉴 크기 설정 */
 header .allArea.active .lyNavArea {
     display: block;
     height: 360px;
@@ -335,6 +365,10 @@ header .lyNavArea {
     z-index: 100;
 }
 
+header .open .lyNavArea {
+    display: block;
+}
+
 header .lyNavArea .lyNavWrap {
     margin: 0 auto;
     border: 1px solid #ebeef3;
@@ -344,6 +378,185 @@ header .lyNavArea .lyNavWrap {
     text-align: left;
 }
 
+header .lyNavWrap .col2 {
+    width: 50%;
+}
+
+header .lyNavWrap .col4 {
+    width: 25%;
+}
+
+header .lyNavArea .lyNavWrap .lyNavInner.side {
+    position: relative;
+    padding-right: 20%;
+}
+
+header .lyNavArea .lyNavWrap .sideCol {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(249, 250, 252);
+    border-left: 1px solid rgb(235, 238, 243);
+}
+
+header .navItem.gi .lyNavWrap .sideInner .row01 {
+    height: 495px;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .row01, 
+header .lyNavArea .lyNavWrap .sideCol .row02 {
+    position: relative;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .row01 {
+    display: block;
+}
+
+header .navItem.gi .lyNavWrap .row01 .colItem {
+    height: 495px;
+    padding: 0px 0px 20px;
+    box-sizing: border-box;
+}
+
+header .navItem.gi .lyNavWrap .row02 .colItem {
+    height: 246px;
+}
+
+#headerWrap .lyNavArea .lyNavWrap .sideCol .sideList {
+    padding: 9px 0 0 13.8%;
+    margin-top: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList li {
+    margin-top: 10px;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList a {
+    color: #000 !important;
+    font: 700 13px/1.2 "\B9D1\C740 \ACE0\B515",Malgun Gothic,"\B3CB\C6C0",Dotum,sans-serif;
+    padding-left: 26px;
+    position: relative;
+    letter-spacing: -.5px;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .titArea + .sideList li:first-child {
+    margin-top: 8px;
+}
+
+header #gnbGi .lyNavArea .lyNavWrap .sideCol .sideBtmBx {
+    position: absolute;
+    left: 50%;
+    width: 198px;
+    margin-left: -99px;
+}
+
+header .gi .sideCol .sideBtmBx {
+    bottom: 30px;
+}
+
+header .gi .sideCol .sideBtmBx .sideLinkType01 a:last-child {
+    margin-bottom: 0;
+}
+
+header .gi .sideCol .sideBtmBx .sideLinkType01 a {
+    display: block;
+    letter-spacing: -.5px;
+    border: 1px solid #ebeced;
+    padding: 12px 0 14px 15px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+header .gi .sideCol .sideBtmBx .sideLinkType01 a strong {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+header .lyNavArea .lyNavWrap .spGnb {
+    background: url(../images/sp_gnb.png) 0px 0px no-repeat;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList a .icnList {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .top100 a .icnList {
+    width: 20px;
+    height: 23px;
+    background-position: -257px -138px;
+    left: 1px;
+    top: 0;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .my-recommend a .icnList {
+    width: 18px;
+    height: 19px;
+    background-position: -119px -120px;
+    left: 2px;
+    top: 0;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .recruit-detail-search a .icnList {
+    width: 22px;
+    height: 22px;
+    background-position: -119px -180px;
+    left: 2px;
+    top: 0;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .best1000 a .icnList {
+    width: 21px;
+    height: 20px;
+    background-position: -30px -120px;
+    left: 1px;
+    top: 1px;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .ort a .icnList {
+    width: 19px;
+    height: 17px;
+    background-position: -30px -150px;
+    left: 1px;
+    top: 1px;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .intern a .icnList {
+    width: 19px;
+    height: 18px;
+    background-position: -60px -120px;
+    left: 1px;
+    top: 0;
+}
+
+header .lyNavArea .lyNavWrap .sideCol .sideList .cal a .icnList {
+    width: 19px;
+    height: 17px;
+    background-position: -60px -150px;
+    left: 1px;
+    top: 1px;
+}
+
+
+header .lyNavArea .btnCloseNav {
+    display: block;
+    width: 29px;
+    height: 30px;
+    position: absolute;
+    right: -50px;
+    top: 28px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-position: -88px -74px !important;
+}
+
 header .lyNavArea .lyNavWrap .titArea {
     display: block;
     padding: 27px 0 4px 26px;
@@ -351,6 +564,15 @@ header .lyNavArea .lyNavWrap .titArea {
     margin: 0 !important;
 }
 
+header .lyNavArea .lyNavWrap .titArea .tit {
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    position: relative;
+    color: rgb(51, 51, 51) !important;
+}
+
+/* > 이미지 불러오기 */
 header .lyNavArea .lyNavWrap .titArea .tit .spGnb {
     display: inline-block;
     width: 6px;
@@ -360,7 +582,8 @@ header .lyNavArea .lyNavWrap .titArea .tit .spGnb {
     vertical-align: 0;
 }
 
-header .lyNavArea .lyNavWrap .titArea .tit.beta, #headerWrap .lyNavArea .lyNavWrap .titArea .tit.beta .spGnb {
+header .lyNavArea .lyNavWrap .titArea .tit.beta, 
+header .lyNavArea .lyNavWrap .titArea .tit.beta .spGnb {
     display: flex;
     align-items: center;
 }
@@ -373,8 +596,13 @@ header .lyNavArea .all-navWrap .colItem .navWrapBanner {
     width: 173px;
 }
 
-header .lyNavArea .lyNavWrap .listBx {
+/* header .lyNavArea .lyNavWrap .listBx {
     padding-left: 26px;
+} */
+
+header .lyNavArea .lyNavWrap .listBx.listBx-col {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header .lyNavArea .all-navWrap .listBx {
@@ -437,6 +665,19 @@ header .lyNavArea .lyNavWrap .listBx:after {
     clear: both;
 }
 
+header .lyNavArea .lyNavWrap .listBx .colList.joblistArea li {
+    width: 54px;
+}
+
+header .lyNavArea .lyNavWrap .listBx .colList li.begin {
+    clear: left;
+    padding-left: 0px !important;
+}
+
+header .lyNavArea .lyNavWrap .listBx .colList li {
+    float: left;
+}
+
 header .allArea .all-navWrap {
     position: relative;
 }
@@ -466,10 +707,12 @@ header .lyNavArea .all-navWrap .colItem {
     position: relative;
 }
 
+/* 전체보기 메뉴별 크기 설정 */
 header .all-navWrap .col4 {
     width: 17% !important;
 }
 
+/* 퓨쳐랩 메뉴만 별도 크기 조절 */
 header .all-navWrap .col5 {
     width: 32% !important;
 }
@@ -485,6 +728,10 @@ header .headNavBar .jkNavArea .serviceNav {
     display: flex;
 }
 
+header .headNavBar .jkNavArea .serviceNav {
+    margin-bottom: 10px;
+}
+
 header .headNavBar .jkNavArea {
     width: 100%;
     margin: -1px 0 0 -1px;
@@ -496,10 +743,39 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
     position: relative;
 }
 
+<<<<<<< HEAD
 .jkNavDimm {
+=======
+/* 전체보기 클릭 시 전체보기 메뉴 아래 화면 어둡게 */
+.jkNavDimm-click.on {
+    display: block !important;
+}
+
+/* 전체보기 누르기전 설정 */
+.jkNavDimm-click {
+>>>>>>> 3ca93793bb01828faa13f4c64d35ea48bee138d2
     display: none;
     position: fixed;
     top: 500px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    z-index: 1999;
+}
+
+/* 채용정보 hover 시 메뉴 아래 화면 어둡게 */
+.jkNavDimm-hover.on {
+    display: block !important;
+}
+
+/* 채용정보 hover 전 설정 */
+.jkNavDimm-hover {
+    display: none;
+    position: fixed;
+    top: 638px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -556,6 +832,7 @@ header .headNavBar .jkNavArea .navItem .linkItem .spNav .txIr {
     letter-spacing: -.5px;
 }
 
+/* 공채정보 버튼 위 2023 작은 이미지 추가 */
 header .headNavBar .jkNavArea .serviceNav .navItem.start > a:before {
     content: "";
     background-image: url(../images/2023_top.svg);
@@ -571,6 +848,7 @@ header .headNavBar .jkNavArea .serviceNav .navItem.start > a:before {
     z-index: 1;
 }
 
+/* 원픽 버튼 위 이직은 작은 이미지 추가 */
 header .headNavBar .jkNavArea .navItem.theme:before {
     content: "";
     background-image: url(../images/turnover.svg);
@@ -586,6 +864,7 @@ header .headNavBar .jkNavArea .navItem.theme:before {
     z-index: 1;
 }
 
+/* 원픽 버튼 왼쪽에 체크 아이콘 이미지 추가 */
 header .headNavBar .jkNavArea .navItem.theme .linkItem .spNav:before {
     content: "";
     display: block;
@@ -600,6 +879,7 @@ header .headNavBar .jkNavArea .navItem.theme .linkItem .spNav:before {
     background-color: rgba(0,0,0,0);
 }
 
+/* 커리어패스 버튼 위에 레벨업은 작은 이미지 추가 */
 header .headNavBar .jkNavArea .serviceNav .navItem.careerpath:before {
     content: "";
     position: absolute;
@@ -615,6 +895,7 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath:before {
     z-index: 1;
 }
 
+/* 로그인, 회원 가입 버튼 설정 */
 header .headNavBar .jkNavArea .userNav .join .join-button, 
 header .headNavBar .jkNavArea .userNav .login .login-button {
     font-size: 15px;
@@ -634,6 +915,7 @@ header .headNavBar .jkNavArea .userNav .userNav-item:last-child {
     margin-right: 0;
 }
 
+/* 기업서비스 버튼 설정 */
 header .headNavBar .jkNavArea .userNav .corp, 
 header .headNavBar .jkNavArea .userNav .corp > a {
     box-sizing: border-box;
@@ -713,11 +995,17 @@ header .headNavBar .navInner:after {
     text-align: left;
 }
 
+/* 왼쪽 큰 배너 설정 */
 #banner-area .bnr-big {
     width: 750px;
     height: 90px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+#banner-area .bnr-big > a img,
+#banner-area .bnr-marketing > a img {
+    margin: 0;
 }
 
 #banner-area > div {
@@ -730,6 +1018,7 @@ header .headNavBar .navInner:after {
     height: 90px;
 }
 
+/* swiper 기능이 추가된 배너 설정 */
 #banner-area .bnr-service {
     width: 216px;
     margin: 0 17px;
@@ -752,6 +1041,7 @@ header .headNavBar .navInner:after {
     display: block;
 }
 
+/* swiper 배너 버튼 설정 */
 #banner-area .bnr-service .bnrs-next, 
 #banner-area .bnr-service .bnrs-prev {
     position: absolute;
@@ -772,6 +1062,7 @@ header .headNavBar .navInner:after {
     background-image: url(../images/next_middle.svg);
 }
 
+/* 우측 작은 배너 이미지 설정 */
 #banner-area .bnr-marketing {
     width: 260px;
     height: 90px;
@@ -779,6 +1070,7 @@ header .headNavBar .navInner:after {
     overflow: hidden;
 }
 
+/* swiper 기능 설정 */
 .bnr-swiper {
     margin-left: auto;
     margin-right: auto;

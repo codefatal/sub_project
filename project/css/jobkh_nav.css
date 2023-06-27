@@ -57,7 +57,6 @@
     left: 0px;
     width: 44px;
     height: 44px;
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     background-color: rgba(191,203,216,.3);
     background-image: url(../images/prev_button.svg);

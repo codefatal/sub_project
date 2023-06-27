@@ -2,12 +2,9 @@
 #content {
     overflow: hidden;
   }
-  /*즉시지원 버튼, 스크랩 버튼*/
-  #applyscrap button {
-    margin-right: 30px;
-  }
+  /*스크랩 버튼*/
   /*채용정보 스크랩(별모양 버튼) 사이즈,색*/
-  .scrap {
+  /* .scrap {
     color: rgba(128, 128, 128, 0);
     border: 1;
     border-color: rgba(255, 235, 205, 0.5);
@@ -16,11 +13,28 @@
     width: 25px;
     height: 25px;
     
-  }
+  } */
+  #applyscrap .scrap {
+    background: url(../images/tpl_bg_icn.png) no-repeat;
+    background-position: -29px -170px;
+    display: block;
+    margin-top: 2.5px;
+    margin-left: auto;
+    margin-right: 35px;
+    width: 19px;
+    height: 19px;
+    text-indent: -9999px;
+    position: relative;
+    border: 0;
+    cursor: pointer;
+    float: right;
+}
+
   /*지원기간 표시 (글씨 크기)*/
   .applydate {
     display: inline;
-    font-size: 8px;
+    font-size: 13px;
+    margin-left: 30px;
   }
   /*즉시지원 버튼*/
   .applynow {
@@ -32,6 +46,8 @@
     font-style: bold;
     border-radius: 8px;
     background-color: rgb(255, 238, 231);
+    margin-left: 30px;
+    margin-right: 0px;
   }
   /*불렛포인트 제거*/
   li {
@@ -44,15 +60,16 @@
     gap: 10px;
     background-color: rgba(33, 150, 243, 0);
     padding: 10px;
-    height: 650px;
+    height: 500px;
   }
   /*채용공고 칸*/
   .grid-container > li {
     background-color: rgba(255, 235, 205, 0);
-    border: 1px solid black;
+    border: 1px solid rgba(94, 88, 88, 0.219);
     text-align: center;
     font-size: 20px;
     border-radius: 12px;
+    border-top: 4px solid blue;
   }
 /*채용공고 사이 이미지배너 4개짜리 한줄에 표시*/
   .imagebanner {
@@ -65,7 +82,6 @@
   /*채용공고 내 즉시지원, 지원기간, 스크랩 버튼 일렬로 표시*/
   #applyscrap {
     display: flex;
-    justify-content: space-between;
   }
   /*채용공고 채용관 이름, 상품안내(더보기) 한줄표시*/
   .bannerwrap {
@@ -88,4 +104,80 @@
     background-color: white;
   
   }
+
+.bannerwrap h4 {
+    margin-bottom: 10px;
+    line-height: 26px;
+    color: #171717;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.grid-container div img {
+  width: 180px;
+  height: 72px;
+}
   
+.sliderwrap .carousel-control-next-icon {
+  right: -8px;
+  background-image: url(../images/next_middle.svg);
+}
+
+.sliderwrap .carousel-control-prev-icon {
+  left: -8px;
+  background-image: url(../images/prev_middle.svg);
+}
+
+.sliderwrap {
+  background-color: rgba(226,234,243,.5);
+
+}
+
+.flow_banner_box {
+  padding-top: 15px;
+}
+
+.sliderwrap .carousel-control-next, 
+.sliderwrap .carousel-control-prev {
+  width: 5%;
+}
+
+.flow_banner_box ul li {
+  margin-left: 30px;
+
+}
+
+.grid-container li {
+  box-sizing: border-box;
+  width: 300px;
+  height: 247px;
+}
+
+/*채용공고 내 회사 이름*/
+.compName{
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: rgba(54, 59, 59, 0.878);
+  font-size: 15px;
+  font-weight: 500;
+}
+/*채용공고 내 채용정보*/
+.recruitInfo{
+  text-align: left;
+  margin-left: 30px;
+  font-size: 16px;
+  margin-right: 30px;
+
+}
+/*즉시지원 버튼 있는 칸 지원기간*/
+.applydateWithApply{
+  margin-left: 4px;
+  display: inline;
+  font-size: 13px;
+}
+
+.grid-container li:hover {
+		transform: translate(0, -10px);
+}
