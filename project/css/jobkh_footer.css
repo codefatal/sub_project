@@ -1,11 +1,3 @@
-
-*{
-    box-sizing: border-box;
-    width: 1260px;
-    margin: 0 50px;
-    padding: 5px;
-
-}
 .footer__notice .list-service {
     /* //공지사항 오른쪽 */
     position: absolute;
