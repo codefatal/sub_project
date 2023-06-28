@@ -41,6 +41,24 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script>
+      $(function() {
+          $(window).scroll(function() {
+              if ($(this).scrollTop() > 500) {
+                  $('.go_top').fadeIn();
+              } else {
+                  $('.go_top').fadeOut();
+              }
+          });
+          
+          $(".go_top").click(function() {
+              $('html, body').animate({
+                  scrollTop : 0
+              }, 0);
+              return false;
+          });
+      });
+  </script>
   </head>
   <body>
     <div class="wrap header">
@@ -1219,6 +1237,7 @@
             </div>
           </section>
         </div>
+        <button class="go_top" style="display: inline-block;"><span class="txt">위로 가기</span></button>
       </main>
     </div>
     <div class="wrap footer">
