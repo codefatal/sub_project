@@ -49,44 +49,44 @@
                 $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
             });
 
-                // 개인 메뉴 클릭 시
-                $(".person-menu").click(function() {
-                    // corp-tab 비활성화
-                    $(".corp-tab").removeClass("active");
-                    $(".corp-menu").removeClass("active");
+            // 개인 메뉴 클릭 시
+            $(".person-menu").click(function() {
+                // corp-tab 비활성화
+                $(".corp-tab").removeClass("active");
+                $(".corp-menu").removeClass("active");
 
-                    // person-tab 활성화
-                    $(".person-tab").addClass("active");
-                    $(".person-menu").addClass("active");
+                // person-tab 활성화
+                $(".person-tab").addClass("active");
+                $(".person-menu").addClass("active");
 
-                    // person-tab에 있는 data-contentnumber를 가져옵니다.
-                    var contentNumber = $(".person-tab li").data("contentnumber");
+                // person-tab에 있는 data-contentnumber를 가져옵니다.
+                var contentNumber = $(".person-tab li").data("contentnumber");
 
-                    // 모든 tab-cont 항목에서 active 클래스를 제거합니다.
-                    $(".tab-cont").removeClass("active");
+                // 모든 tab-cont 항목에서 active 클래스를 제거합니다.
+                $(".tab-cont").removeClass("active");
+            
+                // data-contentnumber와 일치하는 tab-cont 항목에 active 클래스를 추가합니다.
+                $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
+                });
+
+            // 기업 메뉴 클릭 시
+            $(".corp-menu").click(function() {
+                // person-tab 비활성화
+                $(".person-tab").removeClass("active");
+                $(".person-menu").removeClass("active");
+
+                // corp-tab 활성화
+                $(".corp-tab").addClass("active");
+                $(".corp-menu").addClass("active");
+
+                // corp-tab에 있는 data-contentnumber를 가져옵니다.
+                var contentNumber = $(".corp-tab li").data("contentnumber");
+
+                // 모든 tab-cont 항목에서 active 클래스를 제거합니다.
+                $(".tab-cont").removeClass("active");
                 
-                    // data-contentnumber와 일치하는 tab-cont 항목에 active 클래스를 추가합니다.
-                    $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
-                    });
-
-                // 기업 메뉴 클릭 시
-                $(".corp-menu").click(function() {
-                    // person-tab 비활성화
-                    $(".person-tab").removeClass("active");
-                    $(".person-menu").removeClass("active");
-
-                    // corp-tab 활성화
-                    $(".corp-tab").addClass("active");
-                    $(".corp-menu").addClass("active");
-
-                    // corp-tab에 있는 data-contentnumber를 가져옵니다.
-                    var contentNumber = $(".corp-tab li").data("contentnumber");
-
-                    // 모든 tab-cont 항목에서 active 클래스를 제거합니다.
-                    $(".tab-cont").removeClass("active");
-                    
-                    // data-contentnumber와 일치하는 tab-cont 항목에 active 클래스를 추가합니다.
-                    $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
+                // data-contentnumber와 일치하는 tab-cont 항목에 active 클래스를 추가합니다.
+                $(".tab-cont[data-contentnumber='" + contentNumber + "']").addClass("active");
             });
         });
     </script>

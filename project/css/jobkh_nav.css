@@ -53,6 +53,20 @@
   }
   
 /* swiper 버튼 스타일 */
+/* .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset,50%);
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+} */
+
 #point .point-left .match-slide .swiper-button-prev {
     left: 0px;
     width: 44px;
@@ -84,6 +98,12 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+
+#point .point-left .match-slide .swiper-button-next:hover,
+#point .point-left .match-slide .swiper-button-prev:hover {
+    background-color: #fff;
+    border: 1.5px solid blue;
 }
 
 /* 박스 저장 공간 */
@@ -331,6 +351,7 @@ span.post-txt {
 .tab-menu > ul {
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
     align-items: flex-start;
 }
 
@@ -488,7 +509,7 @@ div.blind p {
 
 div.blind a {
     border: 1px solid #000;
-    border-radius: 8px;
+    border-radius: 100px;
     padding: 5px;
 }
 
