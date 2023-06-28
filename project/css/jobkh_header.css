@@ -401,9 +401,54 @@ header .lyNavArea .lyNavWrap .sideCol {
     border-left: 1px solid rgb(235, 238, 243);
 }
 
+header .hhReqLyArea {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 51px;
+    width: 980px;
+    height: 870px;
+    z-index: 10001;
+    margin-left: -490px;
+    background-color: #fff;
+}
+
+header .tplDim {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    z-index: 10000;
+}
+
 header .navItem.gi .lyNavWrap .sideInner .row01 {
     height: 495px;
 }
+
+header .navItem.start .lyNavWrap .row01 .colItem {
+    height: 287px;
+}
+
+header .navItem.hh .lyNavWrap .row01 .colItem, 
+header .navItem.hh .lyNavWrap .sideInner .row01 {
+    height: 245px;
+}
+
+header .navItem.salary .lyNavWrap .row01 .colItem, 
+header .navItem.salary .lyNavWrap .sideInner .row01 {
+    height: 287px;
+}
+
+header .navItem.futurelab .lyNavWrap .row01 .colItem, 
+header .navItem.futurelab .lyNavWrap .sideInner .row01 {
+    height: 240px;
+}
+
 
 header .lyNavArea .lyNavWrap .sideCol .row01, 
 header .lyNavArea .lyNavWrap .sideCol .row02 {
@@ -451,6 +496,48 @@ header #gnbGi .lyNavArea .lyNavWrap .sideCol .sideBtmBx {
     left: 50%;
     width: 198px;
     margin-left: -99px;
+}
+
+/* 헤드헌팅 취업/이직 제의 박스 */
+header .hh .lyNavArea .lyNavWrap .sideCol .sideBtmBx {
+    top: 30px;
+    width: 174px;
+    margin: auto;
+}
+
+header .hh .sideCol .gnbHhLink {
+    border: 1px solid #ebeef3;
+    background-color: #fff;
+    text-align: center;
+    margin: 25px 0;
+    padding: 31px 0 25px;
+}
+
+header .hh .sideCol .gnbHhLink .tx {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: -.75px;
+    line-height: 24px;
+}
+
+header .hh .sideCol .gnbHhLink .tx strong {
+    display: block;
+    color: #39f;
+}
+
+header .hh .sideCol .gnbHhLink .link {
+    padding-top: 17px;
+}
+
+header .hh .sideCol .gnbHhLink .link a {
+    display: block;
+    width: 123px;
+    height: 30px;
+    font: 700 13px/30px "\B9D1\C740 \ACE0\B515",Malgun Gothic,"\B3CB\C6C0",Dotum,sans-serif;
+    color: #39f !important;
+    text-align: center;
+    border: 1px solid #39f;
+    margin: 0 auto;
 }
 
 header .gi .sideCol .sideBtmBx {
@@ -743,9 +830,6 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
     position: relative;
 }
 
-<<<<<<< HEAD
-.jkNavDimm {
-=======
 /* 전체보기 클릭 시 전체보기 메뉴 아래 화면 어둡게 */
 .jkNavDimm-click.on {
     display: block !important;
@@ -753,7 +837,6 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
 
 /* 전체보기 누르기전 설정 */
 .jkNavDimm-click {
->>>>>>> 3ca93793bb01828faa13f4c64d35ea48bee138d2
     display: none;
     position: fixed;
     top: 500px;
@@ -767,15 +850,22 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
 }
 
 /* 채용정보 hover 시 메뉴 아래 화면 어둡게 */
-.jkNavDimm-hover.on {
+.jkNavDimm-hover1.on, 
+.jkNavDimm-hover2.on, 
+.jkNavDimm-hover3.on, 
+.jkNavDimm-hover4.on, 
+.jkNavDimm-hover5.on {
     display: block !important;
 }
 
 /* 채용정보 hover 전 설정 */
-.jkNavDimm-hover {
+.jkNavDimm-hover1, 
+.jkNavDimm-hover2, 
+.jkNavDimm-hover3, 
+.jkNavDimm-hover4, 
+.jkNavDimm-hover5 {
     display: none;
     position: fixed;
-    top: 638px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -783,6 +873,22 @@ header .headNavBar .jkNavArea .serviceNav .navItem.careerpath {
     opacity: .3;
     filter: alpha(opacity=30);
     z-index: 1999;
+}
+
+.jkNavDimm-hover1 {
+    top: 638px;
+}
+.jkNavDimm-hover2 {
+    top: 431px;
+}
+.jkNavDimm-hover3 {
+    top: 388px;
+}
+.jkNavDimm-hover4 {
+    top: 431px;
+}
+.jkNavDimm-hover5 {
+    top: 384px;
 }
 
 header .headNavBar .userNav {
