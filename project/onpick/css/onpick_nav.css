@@ -1,0 +1,655 @@
+/* 원픽 공고 */
+.recruitTitBox {
+    width: 1240px;
+    margin: 56px auto 0;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.recruitTitBox .recruitTit {
+    color: #171717;
+    letter-spacing: -1.5px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.recruitTitBox .recruitTxt {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.recruitTitBox .recruitTxt em {
+    color: #3d98fa;
+}
+
+/* 직업 필터 */
+.recruitJobFilterWrap {
+    margin: 24px 0 0;
+}
+
+.job-tab {
+    max-height: 52px;
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.job-tab .check-slide-box {
+    float: left;
+    display: block;
+    height: 52px;
+    border-radius: 8px;
+    line-height: 24px;
+    font-size: 15px;
+    letter-spacing: -.5px;
+    margin: 0 10px 0 0;
+    background-color: #f4f4f4;
+    color: #171717;
+    width: auto;
+}
+
+.job-tab .check-slide-box .check-slide, .job-tab .check-slide-box input[type=checkbox] {
+    display: none;
+    font-size: 12px;
+    font-family: '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', "돋움", 'Dotum', 'sans-serif';
+    color: #666;
+}
+
+.job-tab .check-slide-box input[type=checkbox]:checked+.input-label {
+    background-color: #171717;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.job-tab .check-slide-box label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.job-tab .check-slide-box .input-label {
+    display: block;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+}
+
+/* swiper 기능 구현 */
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-container-free-mode > .swiper-wrapper {
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+.job-tab .swiper-button-next.swiper-button-disabled, 
+.job-tab .swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+}
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+}
+
+/* 왼쪽 버튼 */
+.job-tab .job-tab-btn-prev {
+    width: 52px;
+    height: 52px;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    margin: 0;
+    background-image: url(../images/prev-filter-button.svg);
+    background-size: cover;
+}
+
+.job-tab .job-tab-btn-prev:before {
+    display: inline-block;
+    content: "";
+    width: 69px;
+    height: 54px;
+    background: linear-gradient(90deg,#fff 23.96%,hsla(0,0%,100%,0));
+    position: absolute;
+    top: 0;
+    right: -69px;
+    z-index: 10;
+}
+
+/* 오른쪽 버튼 */
+.job-tab .job-tab-btn-next {
+    width: 52px;
+    height: 52px;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    margin: 0;
+    background-image: url(../images/prev-filter-button.svg);
+    background-size: cover;
+    transform: scaleX(-1);
+}
+
+.job-tab .job-tab-btn-next:before {
+    display: inline-block;
+    content: "";
+    width: 69px;
+    height: 54px;
+    background: linear-gradient(90deg,#fff 23.96%,hsla(0,0%,100%,0));
+    position: absolute;
+    top: 0;
+    right: -69px;
+    z-index: 10;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
+.recruitFilter-section {
+    border-radius: 15px;
+    background: #fff;
+}
+
+.recruitFilter-section * {
+    box-sizing: border-box;
+}
+
+.recruitFilter-section .sort-select-box {
+    position: relative;
+    z-index: 4;
+    margin: 40px auto 32px;
+    width: 1240px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 15px;
+}
+
+.recruitFilter-section .sort-select-box .sort-select-all {
+    float: left;
+}
+
+.recruitFilter-section .sort-select-box .sort-select-all span {
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: -.5px;
+    color: #6a6a6a;
+}
+
+.recruitFilter-section .sort-select-box .sort-select-all em {
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.recruitFilter-section .sort-select-box .filter-button {
+    float: right;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    background: url(../images/icon_filter.svg) no-repeat 50%;
+    position: relative;
+}
+
+.recruitFilter-section .sort-select-box .search-box {
+    float: right;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.recruitFilter-section .sort-select-box .filter-button span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #3d98fa;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.recruitFilter-section .input-box_common {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+}
+
+.recruitFilter-section .input-box_common input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    color: #b8b8b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.recruitFilter-section .input-box_common .search-button {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    display: block;
+    width: 28px;
+    height: 38px;
+    background: url(../images/icon_search2.svg) no-repeat 50%;
+}
+
+.recruitFilter-section .input-box_common .btnKeywordClear {
+    display: none;
+    background: url(../images/icon_clear.svg) no-repeat 50% 50%;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    font-size: 0;
+    line-height: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.recruitFilter-section .input-box_common input:not(:placeholder-shown) {
+    color: #171717;
+}
+
+.recruitFilter-section .input-box_common input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    color: #b8b8b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box {
+    float: right;
+    margin: 0 30px 0 0;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box {
+    position: relative;
+    float: left;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box .sort-button {
+    display: block;
+    padding-right: 20px;
+    line-height: 38px;
+    font-size: 16px;
+    position: relative;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box .sort-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    width: 14px;
+    height: 20px;
+    background-image: url(../images/arrow_14x20.svg);
+    background-position: 100%;
+    background-size: 14px 20px;
+    background-repeat: no-repeat;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box.active .sort-button:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 20px;
+    background-image: url(../images/arrow_14x20.svg);
+    background-position: 100%;
+    background-size: 14px 20px;
+    background-repeat: no-repeat;
+    transform: rotateX(180deg);
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box .sort-select-modal {
+    right: 0;
+    width: 125px;
+    margin-top: 8px;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box .sort-select-modal ul {
+    margin: 0;
+    padding: 0;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box.active .select-modal_common {
+    display: block;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box .button-box .sort-select-modal {
+    right: 0;
+    width: 125px;
+    margin-top: 8px;
+}
+
+.recruitFilter-section .select-modal_common {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1490196078);
+}
+
+.recruitFilter-section .select-modal_common ul li {
+    padding: 0 10px;
+}
+
+.recruitFilter-section .select-modal_common ul li button {
+    display: block;
+    width: 100%;
+    line-height: 34px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.recruitFilter-section .select-modal_common ul li:nth-child(n+2) button {
+    border-top: 1px solid #eee;
+}
+
+.recruitFilter-section .sort-select-box .drop-down-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.recruitFilter-section .sort-select-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 상세검색 팝업 */
+.filter-modal.active {
+    display: block;
+}
+
+/* 상세검색 기본 틀 */
+.filter-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    right: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 560px;
+    height: 700px;
+    border: 1px solid #6a6a6a;
+    border-radius: 8px;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.filter-modal .content-box {
+    position: relative;
+    padding: 32px 28px 0 32px;
+}
+
+.filter-modal .content-box .all-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: #171717;
+    letter-spacing: -1.5px;
+    border-bottom: 1px solid #171717;
+    padding: 0 0 24px;
+}
+
+.filter-modal .content-box .filter-box {
+    margin: 32px 0 0;
+}
+
+.filter-modal .content-box .filter-box .title {
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.5px;
+    font-weight: 700;
+}
+
+.filter-modal .content-box .filter-box ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.filter-modal .content-box .filter-box ul li {
+    width: 155px;
+    margin: 12px 7px 0 0;
+}
+
+.filter-modal .content-box .filter-box ul li button.active {
+    border: 1px solid #171717;
+    color: #171717;
+    background-color: #fff;
+}
+
+.filter-modal .content-box .filter-box ul li button {
+    padding: 13px 0;
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    line-height: 22px;
+    color: #6a6a6a;
+    background: #f8f8f8;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* 직무 버튼 목록 최상단 3개 */
+.filter-modal .content-box .filter-box.job-box li:first-child, 
+.filter-modal .content-box .filter-box.job-box li:nth-child(2), 
+.filter-modal .content-box .filter-box.job-box li:nth-child(3) {
+    margin-top: 0;
+}
+
+/* 오른쪽 버튼들 마진0 */
+.filter-modal .content-box .filter-box.job-box li:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* 나머지 직무 버튼 설정 */
+.filter-modal .content-box .filter-box.job-box li {
+    width: 155px;
+    margin: 12px 7px 0 0;
+}
+
+/* 지역 버튼 목록 최상단 5개 */
+.filter-modal .content-box .filter-box.district-box li:first-child, 
+.filter-modal .content-box .filter-box.district-box li:nth-child(2), 
+.filter-modal .content-box .filter-box.district-box li:nth-child(3), 
+.filter-modal .content-box .filter-box.district-box li:nth-child(4), 
+.filter-modal .content-box .filter-box.district-box li:nth-child(5) {
+    margin-top: 0;
+}
+
+/* 오른쪽 버튼들 마진0 */
+.filter-modal .content-box .filter-box.district-box li:nth-of-type(5n) {
+    margin-right: 0;
+}
+
+/* 나머지 지역 버튼 설정 */
+.filter-modal .content-box .filter-box.district-box li {
+    width: 90px;
+}
+
+/* 경력 버튼 목록 최상단 3개 */
+.filter-modal .content-box .filter-box.career-box li:first-child, 
+.filter-modal .content-box .filter-box.career-box li:nth-child(2), 
+.filter-modal .content-box .filter-box.career-box li:nth-child(3) {
+    margin-top: 0;
+}
+
+/* 오른쪽 버튼들 마진0 */
+.filter-modal .content-box .filter-box.career-box li:nth-child(3) {
+    margin-right: 0;
+}
+
+/* 학력 버튼 목록 최상단 3개 */
+.filter-modal .content-box .filter-box.eventually-box li:first-child, 
+.filter-modal .content-box .filter-box.eventually-box li:nth-child(2), 
+.filter-modal .content-box .filter-box.eventually-box li:nth-child(3) {
+    margin-top: 0;
+}
+
+/* 오른쪽 버튼들 마진0 */
+.filter-modal .content-box .filter-box.eventually-box li:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* 나머지 학력 버튼 설정 */
+.filter-modal .content-box .filter-box.eventually-box li {
+    width: 155px;
+    margin: 12px 7px 0 0;
+}
+
+/* 기업형태 버튼 목록 최상단 3개 */
+.filter-modal .content-box .filter-box.firm-box li:first-child, 
+.filter-modal .content-box .filter-box.firm-box li:nth-child(2), 
+.filter-modal .content-box .filter-box.firm-box li:nth-child(3) {
+    margin-top: 0;
+}
+
+/* 오른쪽 버튼들 마진0 */
+.filter-modal .content-box .filter-box.firm-box li:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* 나머지 기업형태 버튼 설정 */
+.filter-modal .content-box .filter-box.firm-box li {
+    width: 155px;
+    margin: 12px 7px 0 0;
+}
+
+/* 필터 버튼 */
+.filter-modal .content-box .filter-box.day-box li {
+    width: 237px;
+    margin: 12px 6px 0 0;
+}
+
+.filter-modal .content-box .filter-box.day-box li:nth-child(2) {
+    margin-right: 0;
+}
+
+.filter-modal .content-box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.filter-modal .button-box button {
+    background: none;
+    cursor: pointer;
+}
+
+/* 상세검색 초기화, 적용하기 버튼 범위 */
+.filter-modal .button-box {
+    position: sticky;
+    bottom: 0;
+    margin: 32px 0 0;
+    padding: 32px 0;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* 상세검색 초기화 버튼 */
+.filter-modal .button-box .search-reset {
+    line-height: 34px;
+    border: 1px solid #d2d2d2;
+    padding: 9px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #171717;
+    border-radius: 8px;
+    margin: 0 4px 0 0;
+}
+
+/* 상세보기 적용하기 버튼 */
+.filter-modal .button-box .search-button {
+    line-height: 34px;
+    border: 1px solid #3d98fa;
+    padding: 9px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #3d98fa;
+    margin: 0 0 0 4px;
+}
+
+.filter-modal .button-box .search-button:after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 11px;
+    background: url(../images/icon_arrow_right_wt.svg) no-repeat 0;
+    margin: 0 0 0 7px;
+}
+
+.filter-modal .close-button {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    width: 16px;
+    height: 16px;
+    line-height: 34px;
+    background: url(../images/icon_close.svg) no-repeat 0;
+    font: 0/0 a;
+}
