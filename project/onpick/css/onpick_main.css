@@ -1,0 +1,152 @@
+/*메인 전체*/
+/* .mainwrap{} */
+/*배너부분 전체 (ul)*/
+.bannerlist{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: rgba(33, 150, 243, 0);
+    padding: 10px;
+}
+/*각 배너 한칸*/
+.bannereach{
+    background-color: rgba(255, 235, 205, 0);
+    border: 1px solid rgba(94, 88, 88, 0.219);
+    text-align: left;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 270px;
+    height: 332px;
+    position: relative;
+}
+/*스크랩버튼*/
+.scrapbtn{
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-repeat: no-repeat;
+}
+/*스크랩 버튼 텍스트*/
+.scraphover{
+    visibility: hidden;
+    display: block;
+    width: 50px;
+}
+/*스크랩버튼 텍스트*/
+.scrapbtn:hover .scraphover{
+    visibility: visible;
+    box-sizing: border-box;
+    border: 1px;
+    border-color: black;
+    font-size: 10px;
+    background-color: rgb(218, 218, 218);
+    position: absolute;
+    left: -15px;
+    
+}
+/*배너 내 회사 사진*/
+.companyimg{
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 120px;
+}
+/*배너 내 회사 이름*/
+.companyname p{
+    font-size: 13px;
+    margin-left: 16px;
+    margin-top: 13px;
+    font-weight: 800;
+    display: inline-flex;
+}
+/*관심기업 버튼 (하트)*/
+.companyname button{
+    margin-bottom: 3px;
+}
+/*관심기업 버튼 호버시 텍스트*/
+.intcom{
+    visibility: hidden;
+}
+/*관심기업 호버텍스트*/
+.companyname button:hover .intcom{
+    visibility: visible;
+    box-sizing: border-box;
+    border: 1px;
+    border-color: black;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 80px;
+    top: 154px;
+}
+/*채용정보*/
+.recruitInfo{
+    font-size: 12px;
+    margin-left: 16px;
+}
+/*분야, 근무위치 칸*/
+.fieldlocation{
+    display: flex;
+    text-align: left;
+    width: 150px;
+    font-size: 10px;
+    margin-left: 16px;
+    color: rgb(86, 89, 92);
+}
+/*모집분야*/
+.recruitingfield{
+}
+/*모집분야와 근무위치 나눔 선*/
+.divideel{
+}
+/*근무위치*/
+.companylocation{
+    
+}
+/*추가정보*/
+.additionalinfo{
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: rgb(142, 146, 150);
+}
+/*마지막 아래 칸 나눔선*/
+.hrline{
+    width: 240px;
+    margin-left: 13.5px;
+}
+/*마지만 맨 아래 칸*/
+.bottompart{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+/*합격추가금 정보*/
+.congrtz{
+    text-align: left;
+}
+.congrtzimg{
+    display: inline-block;
+}
+/*모집기간*/
+.applyduedate{
+    font-size: 9px;
+}
+/*배너 호버시 움직임*/
+.bannerlist li:hover {
+    transform: translate(0, -10px);
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+
