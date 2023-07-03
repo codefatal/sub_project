@@ -5,10 +5,29 @@ $(document).ready(function() {
     var $BtnCheckItems = $('button.dev-check-item');
     var $recruitTxt = $('.recruitTxt .dev-select-partName');
     var $badgeCount = $('#badgeCount');
+    var $totalCount = $('#totalCount');
+    var count = 0;
+
+    $.ajax({
+        url : "onpick_main.html",
+        success : function(result) {
+            $(".recruitingfield").parents("li.bannereach").addClass("active");
+            $totalCount.text($("li.bannereach").length);
+        }
+    });
+
 
     // nav swiper 부분 버튼 클릭 기능
     $inputCheckAll.click(function() {
         $inputCheckAll.addClass("on");
+        $.ajax({
+            url : "onpick_main.html",
+            success : function(result) {
+                $(".recruitingfield").parents("li.bannereach").addClass("active");
+                $totalCount.text($("li.bannereach").length);
+            }
+        });
+        count = 0;
         $recruitTxt.text("전체");
         $('button.dev-check-item, button.dev-check-all').removeClass('active'); // 모든 버튼에서 'active' 클래스 제거
         $BtnCheckAll.addClass('active');
@@ -23,16 +42,62 @@ $(document).ready(function() {
     });
 
     $inputCheckItems.click(function() {
-        $inputCheckAll.removeClass("on");
+        if($inputCheckAll.hasClass("on")) {
+            $inputCheckAll.removeClass("on");
+            $.ajax({
+                url : "onpick_main.html",
+                success : function(result) {
+                    $(".recruitingfield").parents("li.bannereach").removeClass("active");
+                }
+            });
+        }
         if ($(this).prop('checked')) {
+            $thisinputCheck = $(this).next().text();
             $inputCheckAll.prop('checked', false);
+            $.ajax({
+                url : "onpick_main.html",
+                success : function(result) {
+                    $(".recruitingfield").each(function() {
+                        var recruitingfield = $(this).children().text();
+                        recruitingfield = $.trim(recruitingfield);
+                        if($thisinputCheck == recruitingfield) {
+                            $(this).parents("li.bannereach").addClass("active");
+                            count++;
+                        }
+                    });
+                    $totalCount.text(count);
+                }
+            });
         } else if($inputCheckItems.filter(':checked').length === 0) {
             $inputCheckAll.addClass("on");
             $inputCheckAll.prop('checked', true);
             $recruitTxt.text("전체");
             $badgeCount.css('display', 'none');
             $badgeCount.text('0');
+            $.ajax({
+                url : "onpick_main.html",
+                success : function(result) {
+                    $(".recruitingfield").parents("li.bannereach").addClass("active");
+                    $totalCount.text($("li.bannereach").length);
+                }
+            });
+            count = 0;
             e.preventDefault();
+        } else {
+            $.ajax({
+                url : "onpick_main.html",
+                success : function(result) {
+                    $(".recruitingfield").each(function() {
+                        var recruitingfield = $(this).children().text();
+                        recruitingfield = $.trim(recruitingfield);
+                        if($thisinputCheck == recruitingfield) {
+                            $(this).parents("li.bannereach").removeClass("active");
+                            count--;
+                        }
+                    });
+                    $totalCount.text(count);
+                }
+            });
         }
         updateResultText();
         if ($inputCheckItems.prop('checked')) {
@@ -42,6 +107,7 @@ $(document).ready(function() {
             $badgeCount.css('display', 'none');
             $badgeCount.text('0');
         }
+
     });
 
     // 상세검색 버튼 기능
