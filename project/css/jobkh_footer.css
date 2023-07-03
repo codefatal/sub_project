@@ -155,7 +155,7 @@
 .footer__notice .list-service:after {
     content: "";
     display: block;
-    clear: both
+    clear: both;
 }
 
 .footer__notice .list-service li {
@@ -184,7 +184,7 @@
 }
 
 .footer__notice .list-service li a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .footer__notice-wrap {
