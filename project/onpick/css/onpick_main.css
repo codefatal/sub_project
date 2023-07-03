@@ -10,6 +10,7 @@
 }
 /*각 배너 한칸*/
 .bannereach{
+    display: none;
     background-color: rgba(255, 235, 205, 0);
     border: 1px solid rgba(94, 88, 88, 0.219);
     text-align: left;
@@ -19,6 +20,11 @@
     height: 332px;
     position: relative;
 }
+
+.bannereach.active {
+    display: block;
+}
+
 /*스크랩버튼*/
 .scrapbtn{
     width: 20px;
