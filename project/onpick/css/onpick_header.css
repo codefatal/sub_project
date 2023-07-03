@@ -1,6 +1,7 @@
 /* header 공간 설정 */
 #wrap{
     width: 1240px;
+    height: 280px;
     margin: 0;
     background-color: white;
 }
