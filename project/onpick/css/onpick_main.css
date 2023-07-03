@@ -90,7 +90,7 @@
 .fieldlocation{
     display: flex;
     text-align: left;
-    width: 150px;
+    width: 250px;
     font-size: 10px;
     margin-left: 16px;
     color: rgb(86, 89, 92);
@@ -103,7 +103,7 @@
 }
 /*근무위치*/
 .companylocation{
-    
+  
 }
 /*추가정보*/
 .additionalinfo{
