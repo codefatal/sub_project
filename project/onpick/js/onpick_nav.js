@@ -7,7 +7,7 @@ $(document).ready(function() {
     var $badgeCount = $('#badgeCount');
 
     // nav swiper 부분 버튼 클릭 기능
-    $inputCheckAll.click(function() {
+    $inputCheckAll.click(function(e) {
         $inputCheckAll.addClass("on");
         $recruitTxt.text("전체");
         $('button.dev-check-item, button.dev-check-all').removeClass('active'); // 모든 버튼에서 'active' 클래스 제거
@@ -22,7 +22,7 @@ $(document).ready(function() {
         }
     });
 
-    $inputCheckItems.click(function() {
+    $inputCheckItems.click(function(e) {
         $inputCheckAll.removeClass("on");
         if ($(this).prop('checked')) {
             $inputCheckAll.prop('checked', false);
@@ -45,7 +45,7 @@ $(document).ready(function() {
     });
 
     // 상세검색 버튼 기능
-    $BtnCheckAll.click(function() {
+    $BtnCheckAll.click(function(e) {
         $BtnCheckAll.addClass("active");
         $recruitTxt.text("전체");
         if ($(this).hasClass('active')) {
