@@ -202,6 +202,7 @@
 .footer__help-wrap--footer__consult::before {
     vertical-align: -2px
 }
+
 /* footer helper title설정 */
 .footer__help-title {
     display: inline-block
