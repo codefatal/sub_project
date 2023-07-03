@@ -84,6 +84,7 @@ $(document).ready(function() {
             count = 0;
             e.preventDefault();
         } else {
+            $thisinputCheck = $(this).next().text();
             $.ajax({
                 url : "onpick_main.html",
                 success : function(result) {
@@ -100,7 +101,7 @@ $(document).ready(function() {
             });
         }
         updateResultText();
-        if ($inputCheckItems.prop('checked')) {
+        if ($inputCheckItems.prop('checked').length >= 1) {
             $badgeCount.css('display', 'block');
             $badgeCount.text('1');
         } else {
@@ -127,10 +128,6 @@ $(document).ready(function() {
         } else {
             $BtnCheckAll.addClass('active');
         }
-    });
-
-    $inputCheckAll.on('click', function(e) {
-        e.preventDefault();
     });
 
     // checked 된 버튼에 따라 원픽공고 오른쪽에 버튼 이름 기재
