@@ -366,7 +366,7 @@
 .footer__award-item a::before {
     content: "";
     position: absolute;
-    background-image: url(/sub_project/project/images/footer_spr_award_01.png?v202205161);
+    background-image: url(/project/images/footer_spr_award_01.png?v202205161);
     vertical-align: top
 }
 .footer__award-item a:hover {
