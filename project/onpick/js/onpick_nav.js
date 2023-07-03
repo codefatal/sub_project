@@ -101,7 +101,7 @@ $(document).ready(function() {
             });
         }
         updateResultText();
-        if ($inputCheckItems.prop('checked').length >= 1) {
+        if ($('input.dev-check-item:checked').length >= 1) {
             $badgeCount.css('display', 'block');
             $badgeCount.text('1');
         } else {
