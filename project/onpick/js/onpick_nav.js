@@ -16,7 +16,6 @@ $(document).ready(function() {
         }
     });
 
-
     // nav swiper 부분 버튼 클릭 기능
     $inputCheckAll.click(function() {
         $inputCheckAll.addClass("on");
@@ -200,7 +199,7 @@ $(document).ready(function() {
     // 팝업 활성 화 후 적용 버튼 누를 시
     $('.search-button, .close-button').click(function() {
         $('.filter-modal').removeClass("active");
-        var count = 0;
+        let count = 0;
 
         $('.filter-box').each(function() {
             if ($(this).find('.dev-check-item.active').length > 0) {

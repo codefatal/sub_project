@@ -64,15 +64,7 @@
                     $('.wrap.footer').html(footerrefine);
                 }
             });
-
-            $.ajax({
-                url : "js/onpick_nav.js",
-                success : function(result) {
-                    var headerrefine = $(".wrap.header").html(result).find('header');
-                    $('.wrap.header').html(headerrefine);
-                }
-            });
-        })
+        });
     </script>
 </head>
 <body>
@@ -90,6 +82,5 @@
     </div>
     <!-- swiper 스크립트 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 </body>
 </html>
