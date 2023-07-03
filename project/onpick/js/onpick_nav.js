@@ -41,9 +41,13 @@ $(document).ready(function() {
         }
     });
 
+    // 원픽공고 밑에 버튼 클릭 시
     $inputCheckItems.click(function() {
+        // 전체 버튼이 활성화 되어 있는 경우
         if($inputCheckAll.hasClass("on")) {
+            // 전체 버튼 비활성화
             $inputCheckAll.removeClass("on");
+            // main html로 들어가서 li.bannereach 클래스 모든 active 클래스 제거
             $.ajax({
                 url : "onpick_main.html",
                 success : function(result) {
@@ -51,24 +55,37 @@ $(document).ready(function() {
                 }
             });
         }
+        // 버튼 클릭 시 
         if ($(this).prop('checked')) {
+            // 버튼 텍스트 추출
             $thisinputCheck = $(this).next().text();
+            // 전체 버튼 비활성화
             $inputCheckAll.prop('checked', false);
+            // main html 불러오기
             $.ajax({
                 url : "onpick_main.html",
                 success : function(result) {
+                    // .recruitingfield 클래스 반복 돌리기
                     $(".recruitingfield").each(function() {
+                        // .recruitingfield 클래스 자식 요소의 텍스트 추출
                         var recruitingfield = $(this).children().text();
+                        // 추출한 텍스트 양옆 공백 제거
                         recruitingfield = $.trim(recruitingfield);
+                        // 텍스트 비교
                         if($thisinputCheck == recruitingfield) {
+                            // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 추가
                             $(this).parents("li.bannereach").addClass("active");
+                            // 카운터 증가
                             count++;
                         }
                     });
+                    // 증가한 카운터 값 총 건수 갱신
                     $totalCount.text(count);
                 }
             });
+            // 전체 버튼 외 모든 버튼이 비활성화 시
         } else if($inputCheckItems.filter(':checked').length === 0) {
+            // 전체 버튼 활성화
             $inputCheckAll.addClass("on");
             $inputCheckAll.prop('checked', true);
             $recruitTxt.text("전체");
@@ -81,26 +98,37 @@ $(document).ready(function() {
                     $totalCount.text($("li.bannereach").length);
                 }
             });
+            // 카운터 초기화
             count = 0;
             e.preventDefault();
         } else {
+            // 버튼 텍스트 추출
             $thisinputCheck = $(this).next().text();
+            // main html 불러오기
             $.ajax({
                 url : "onpick_main.html",
                 success : function(result) {
+                    // .recruitingfield 클래스 반복 돌리기
                     $(".recruitingfield").each(function() {
+                        // .recruitingfield 클래스 자식 요소의 텍스트 추출
                         var recruitingfield = $(this).children().text();
+                        // 추출한 텍스트 양옆 공백 제거
                         recruitingfield = $.trim(recruitingfield);
+                        // 텍스트 비교
                         if($thisinputCheck == recruitingfield) {
+                            // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 삭제
                             $(this).parents("li.bannereach").removeClass("active");
+                            // 카운터 감소
                             count--;
                         }
                     });
+                    // 감소한 카운터 값 총 건수 갱신
                     $totalCount.text(count);
                 }
             });
         }
         updateResultText();
+        // 전체 버튼 외 체크된 버튼이 1개 이상인 경우
         if ($('input.dev-check-item:checked').length >= 1) {
             $badgeCount.css('display', 'block');
             $badgeCount.text('1');
