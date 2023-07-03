@@ -1,3 +1,4 @@
+/* header 공간 설정 */
 #wrap{
     width: 1240px;
     margin: 0;
@@ -5,10 +6,10 @@
 }
 #topArea{
     position: relative;
-    height: 120px;
+    height: 100px;
     width: 100%;
     background-color: white;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e8e8e8;
     box-sizing: border-box;
 }
 .topContent{
@@ -18,23 +19,23 @@
     display: flex;
     align-items: center;
 }
+
+/* 죄측 상단 로고 */
 .logo{
     display: flex;
-    align-items: center ;
-   
+    align-items: center ;  
 }
-
 .logo a span{
     display: flex;
     align-items: center;
     color: #171717;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: -1,5px;
     font-weight: 500;
     margin-left: 21px;
 }
-#topArea .logo a span::before{
+.logo a span::before{
     content: "";
     width: 20px;
     height: 20px;
@@ -43,33 +44,46 @@
     margin-right: 8px;
     background-repeat: no-repeat;
 }
+.topMenu li:last-child::after {
+    display: none
+}
+/* 우측 상단 메뉴 */
 #topArea .topMenu{
     display: flex;
     height: 100%;
     margin-top: 15px;
-    margin-left: 570px;
-
+    margin-left: 580px;
 }
 .topMenu li{
-    height: 100px;
-    display: flex;
-    margin: 0px, 16px, 0px, 17px;
+    padding: 0 16px 0 15px;
     position: relative;
+    height: 100%;
+    display: flex;
     float: left;
+    align-items: center
 }
-
 .topMenu li a{
     line-height: 22px;
     color: #6a6a6a;
-    padding: 0 15px;
+    padding: 0 1px;
     display: block;
     font-size: 14px;
     height: 100%;
     display: flex;
     align-items: center;
 }
+.topMenu li::after {
+    content: "";
+    display: inline-block;
+    background-color: #e8e8e8;
+    height: 12px;
+    width: 1px;
+    position: absolute;
+    top: 43.5%;
+    right: 0;
+}
 
-/* headBanner */
+/* 광고 베너 Banner */
 .head_banner{
     position: relative;
     margin: 15px 0 0;

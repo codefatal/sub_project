@@ -17,14 +17,14 @@
     margin: 0 auto
 }
 
-/* footer advertisement 크기설정 */
+/* footer 상단 광고 크기설정 */
 .footer__advertisement {
     padding: 20px 0px;
     display: table;
     width: 100%
 }
 
-/* advertisement--text */
+/* 첫번째와 마지막 광고 */
 .footer__advertisement--text {
     display: table-cell;
     font-size: 14px;
@@ -37,7 +37,7 @@
     color: #333
 }
 
-/* advertisement--image */
+/* 두번째 광고 */
 .footer__advertisement--image {
     display: table-cell;
     width: 495px;
@@ -46,7 +46,7 @@
     vertical-align: middle
 }
 
-/* footer_notice 설정 */
+/* 공지사항 설정 */
 .footer__notice {
     position: relative;
     overflow: hidden;
@@ -99,7 +99,7 @@
     font-size: 0
 }
 
-/* footer 공지사항 설정 */
+/* 공지사항 */
 .footer__notice-title {
     display: inline-block;
     width: 64px;
@@ -117,7 +117,7 @@
     text-decoration: underline
 }
 
-/* notice-text 설정 */
+/* notice-text [사전공지] */
 .footer__notice-text {
     display: inline-block;
     height: 100%;
@@ -130,8 +130,6 @@
 .footer__notice-text a:hover {
     color: #000
 }
-
-/* notice-text [사전공지] */
 .footer__notice-text .ellipsis {
     display: inline-block;
     overflow: hidden;
@@ -228,7 +226,7 @@
     display: none;
 }
 
-/* footer__help FAX */
+/* footer__help 설정*/
 .footer__help-title {
     display: inline-block
 }
@@ -246,6 +244,8 @@
 .footer__help-text span {
     letter-spacing: 0
 }
+
+/* 이메일 */
 .footer__help-text>a.footer__help-link {
     color: #888;
     text-decoration: none;
