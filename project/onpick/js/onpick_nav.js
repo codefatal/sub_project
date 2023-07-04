@@ -3,14 +3,14 @@ $(document).ready(function() {
     var $inputCheckItems = $('input.dev-check-item');
     var $filterModal = $('.filter-modal');
 
-    var $filterPartCtgrAll  = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-all"); // 필터 직무 전체
-    var $filterPartCtgrItem = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-item"); // 필터 직무
-    var $filterLocalAll     = $filterModal.find(".dev-wrap-filterLocal .dev-check-all"); // 필터 지역 전체
-    var $filterLocalItem    = $filterModal.find(".dev-wrap-filterLocal .dev-check-item"); // 필터 지역
-    var $filterCareerItem   = $filterModal.find(".dev-wrap-filterCareer .dev-check-item"); // 필터 경력
-    var $filterEduLevelItem = $filterModal.find(".dev-wrap-filterEduLevel .dev-check-item"); // 필터 학력
-    var $filterCoTypeItem   = $filterModal.find(".dev-wrap-filterCoType .dev-check-item"); // 필터 기업 형태
-    var $filterDayItem      = $filterModal.find(".dev-wrap-filterDay .dev-check-item"); // 필터 날짜
+    var $filterPartCtgrAll = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-all");
+    var $filterPartCtgrItem = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-item");
+    var $filterLocalAll = $filterModal.find(".dev-wrap-filterLocal .dev-check-all");
+    var $filterLocalItem = $filterModal.find(".dev-wrap-filterLocal .dev-check-item");
+    var $filterCareerItem = $filterModal.find(".dev-wrap-filterCareer .dev-check-item");
+    var $filterEduLevelItem = $filterModal.find(".dev-wrap-filterEduLevel .dev-check-item");
+    var $filterCoTypeItem = $filterModal.find(".dev-wrap-filterCoType .dev-check-item");
+    var $filterDayItem = $filterModal.find(".dev-wrap-filterDay .dev-check-item");
     var $recruitTxt = $('.recruitTxt .dev-select-partName');
     var $badgeCount = $('#badgeCount');
     var $totalCount = $('#totalCount');
@@ -67,6 +67,7 @@ $(document).ready(function() {
                 url : "onpick_main.html",
                 success : function(result) {
                     $(".recruitingfield").parents("li.bannereach").removeClass("active");
+                    updateList();
                 }
             });
         }
@@ -80,6 +81,9 @@ $(document).ready(function() {
             $.ajax({
                 url : "onpick_main.html",
                 success : function(result) {
+                    if($('input.dev-check-item:checked').length == 1) {
+                        $("li.bannereach").css('display', 'none');
+                    }
                     // .recruitingfield 클래스 반복 돌리기
                     $(".recruitingfield").each(function() {
                         // .recruitingfield 클래스 자식 요소의 텍스트 추출
@@ -90,10 +94,12 @@ $(document).ready(function() {
                         if($thisinputCheck == recruitingfield) {
                             // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 추가
                             $(this).parents("li.bannereach").addClass("active");
+                            $(this).parents("li.bannereach").css('display', 'grid');
                             // 카운터 증가
                             totalcount++;
                         }
                     });
+                    updateList();
                     // 증가한 카운터 값 총 건수 갱신
                     $totalCount.text(totalcount);
                 }
@@ -112,7 +118,9 @@ $(document).ready(function() {
                 url : "onpick_main.html",
                 success : function(result) {
                     $(".recruitingfield").parents("li.bannereach").addClass("active");
+                    $(".recruitingfield").parents("li.bannereach").css('display', 'grid');
                     $totalCount.text($("li.bannereach").length);
+                    updateList();
                 }
             });
             // 카운터 초기화
@@ -135,10 +143,12 @@ $(document).ready(function() {
                         if($thisinputCheck == recruitingfield) {
                             // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 삭제
                             $(this).parents("li.bannereach").removeClass("active");
+                            $(this).parents("li.bannereach").css('display', 'none');
                             // 카운터 감소
                             totalcount--;
                         }
                     });
+                    updateList();
                     // 감소한 카운터 값 총 건수 갱신
                     $totalCount.text(totalcount);
                 }
