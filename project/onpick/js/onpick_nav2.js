@@ -1,21 +1,21 @@
 $(document).ready(function() {
     $searchText = $('#searchText');
-    $searchButton = $('.search-button'); //on("click")
+    $searchButton = $('.search-button');
     
     $('#searchText').on("click", function(){
         var val = $(this).val();
         $(".bannereach").hide();
         var temp = $(".bannereach:contains('" + val +"')");
         $(temp).show(); 
-
-     
     })
 
-    $(clickHandler);
+    clickHandler();
     function clickHandler(){
         $('.search-button').on("click", function(){
-            $("temp").show();
+            var val = $('#searchText').val();
             $(".bannereach").hide();
+            var temp = $(".bannereach:contains('" + val +"')");
+            $(temp).show();
         });
     }
 
@@ -27,10 +27,5 @@ $(document).ready(function() {
         }
     });
 });
-//   $('#searchText').on("", function(){
-    // var val = $(this).val();
-    // $(".bannereach").hide();
-    // var temp = $(".bannereach:contains('" + val +"')");
-    // $(temp).show(); 
 
  
