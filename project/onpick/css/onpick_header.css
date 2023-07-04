@@ -40,7 +40,7 @@
     content: "";
     width: 20px;
     height: 20px;
-    background-image: url(/project/onpick/images/onepickcheck.svg);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24.004'%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 43'%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 41'%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 40'%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 39'%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 38'%3E%3Ccircle data-name='%ED%83%80%EC%9B%90 146' cx='12' cy='12' fill='%23fbc400' r='12' transform='translate(0 .004)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg data-name='%EA%B7%B8%EB%A3%B9 42' fill='%23002151'%3E%3Cpath data-name='%ED%8C%A8%EC%8A%A4 3' d='M12.233 17.352a2.125 2.125 0 01-2.967-.417l-4.089-5.414a2.124 2.124 0 01.417-2.967 2.125 2.125 0 012.967.417l4.086 5.414a2.125 2.125 0 01-.414 2.967z'/%3E%3Cpath data-name='%ED%8C%A8%EC%8A%A4 4' d='M9.694 17.356a2.125 2.125 0 01-.422-2.966L19.508.844a2.125 2.125 0 012.966-.422 2.124 2.124 0 01.422 2.966L12.66 16.934a2.124 2.124 0 01-2.966.422z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-size: 100%;
     margin-right: 8px;
     background-repeat: no-repeat;

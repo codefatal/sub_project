@@ -253,6 +253,17 @@
 .footer__help-text>a.footer__help-link:hover {
     text-decoration: underline
 }
+.footer__help--icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0;
+    vertical-align: middle;
+    background-image: url("https://i.jobkorea.kr/content/images/personal/spr_personal.png?2021032200");
+    background-repeat: no-repeat;
+    background-position: -150px 0;
+}
 
 /* footer sns 설정 */
 .footer__sns {
@@ -266,20 +277,47 @@
     display: inline-block;
     font-family: "\B3CB\C6C0", dotum, sans-serif;
     color: #ccc;
-    margin: 0px 7px;
+    margin: 0px 4px;
     vertical-align: -2px
 }
 
 .footer__sns-item {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 6px
+    margin-left: 6px;
+}
+/* sns img 위에 글자 안보이게함. */
+.skip{
+    position: absolute !important;
+    top: -5000em;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
 }
 .footer__sns-item a {
     display: block;
     width: 20px;
     height: 24px;
     overflow: hidden;
+    background-image: url("https://i.jobkorea.kr/content/images/personal/spr_personal.png?2021032200");
+    background-repeat: no-repeat;
+}
+.footer__sns-item--blog {
+    background-position: 0 0;
+}
+.footer__sns-item--post {
+    background-position: -30px 0;
+}
+.footer__sns-item--facebook {
+    background-position: -60px 0;
+}
+.footer__sns-item--instagram {
+    background-position: -90px 0;
+}
+.footer__sns-item--youtube {
+    background-position: -120px 0;
 }
 
 /* copyright 설정 */
