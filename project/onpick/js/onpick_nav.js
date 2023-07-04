@@ -1,12 +1,22 @@
 $(document).ready(function() {
     var $inputCheckAll = $('input.dev-check-all');
     var $inputCheckItems = $('input.dev-check-item');
-    var $BtnCheckAll = $('button.dev-check-all');
-    var $BtnCheckItems = $('button.dev-check-item');
+    var $filterModal = $('.filter-modal');
+
+    var $filterPartCtgrAll  = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-all"); // 필터 직무 전체
+    var $filterPartCtgrItem = $filterModal.find(".dev-wrap-filterPartCtgr .dev-check-item"); // 필터 직무
+    var $filterLocalAll     = $filterModal.find(".dev-wrap-filterLocal .dev-check-all"); // 필터 지역 전체
+    var $filterLocalItem    = $filterModal.find(".dev-wrap-filterLocal .dev-check-item"); // 필터 지역
+    var $filterCareerItem   = $filterModal.find(".dev-wrap-filterCareer .dev-check-item"); // 필터 경력
+    var $filterEduLevelItem = $filterModal.find(".dev-wrap-filterEduLevel .dev-check-item"); // 필터 학력
+    var $filterCoTypeItem   = $filterModal.find(".dev-wrap-filterCoType .dev-check-item"); // 필터 기업 형태
+    var $filterDayItem      = $filterModal.find(".dev-wrap-filterDay .dev-check-item"); // 필터 날짜
     var $recruitTxt = $('.recruitTxt .dev-select-partName');
     var $badgeCount = $('#badgeCount');
     var $totalCount = $('#totalCount');
+
     var count = 0;
+    var totalcount = 0;
 
     $.ajax({
         url : "onpick_main.html",
@@ -26,13 +36,19 @@ $(document).ready(function() {
                 $totalCount.text($("li.bannereach").length);
             }
         });
-        count = 0;
+        totalcount = 0;
         $recruitTxt.text("전체");
-        $('button.dev-check-item, button.dev-check-all').removeClass('active'); // 모든 버튼에서 'active' 클래스 제거
-        $BtnCheckAll.addClass('active');
+        $filterPartCtgrAll.removeClass("active");
+        $filterPartCtgrItem.removeClass("active");
+        $filterPartCtgrAll.addClass('active');
         if ($(this).prop('checked')) {
-            $badgeCount.css('display', 'none');
-            $badgeCount.text('0');
+            if(count == 0) {
+                $badgeCount.css('display', 'none');
+                $badgeCount.text(0);
+            } else {
+                $badgeCount.css('display', 'block');
+                $badgeCount.text(count-1);
+            }
         }
         if ($(this).prop('checked')) {
             $inputCheckItems.prop('checked', false);
@@ -75,11 +91,11 @@ $(document).ready(function() {
                             // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 추가
                             $(this).parents("li.bannereach").addClass("active");
                             // 카운터 증가
-                            count++;
+                            totalcount++;
                         }
                     });
                     // 증가한 카운터 값 총 건수 갱신
-                    $totalCount.text(count);
+                    $totalCount.text(totalcount);
                 }
             });
             // 전체 버튼 외 모든 버튼이 비활성화 시
@@ -87,6 +103,8 @@ $(document).ready(function() {
             // 전체 버튼 활성화
             $inputCheckAll.addClass("on");
             $inputCheckAll.prop('checked', true);
+            $filterPartCtgrAll.addClass("active");
+            $filterPartCtgrItem.removeClass("active");
             $recruitTxt.text("전체");
             $badgeCount.css('display', 'none');
             $badgeCount.text('0');
@@ -118,44 +136,85 @@ $(document).ready(function() {
                             // 텍스트가 동일한 경우 li.bannereach 클래스에 active 클래스 삭제
                             $(this).parents("li.bannereach").removeClass("active");
                             // 카운터 감소
-                            count--;
+                            totalcount--;
                         }
                     });
                     // 감소한 카운터 값 총 건수 갱신
-                    $totalCount.text(count);
+                    $totalCount.text(totalcount);
                 }
             });
         }
         updateResultText();
         // 전체 버튼 외 체크된 버튼이 1개 이상인 경우
         if ($('input.dev-check-item:checked').length >= 1) {
-            $badgeCount.css('display', 'block');
-            $badgeCount.text('1');
+            if(count == 0) {
+                $badgeCount.css('display', 'block');
+                $badgeCount.text(count+1);
+            } else {
+                $badgeCount.css('display', 'block');
+                $badgeCount.text(count);
+            }
         } else {
-            $badgeCount.css('display', 'none');
-            $badgeCount.text('0');
+            if(count == 0) {
+                $badgeCount.css('display', 'none');
+                $badgeCount.text(0);
+            } else {
+                $badgeCount.css('display', 'block');
+                $badgeCount.text(count-1);
+            }
         }
-
     });
 
-    // 상세검색 버튼 기능
-    $BtnCheckAll.click(function() {
-        $BtnCheckAll.addClass("active");
-        $recruitTxt.text("전체");
+    // 상세검색 팝업 내 버튼 기능
+    $filterPartCtgrAll.click(function() {
+        $filterPartCtgrAll.addClass("active");
         if ($(this).hasClass('active')) {
-            $BtnCheckItems.removeClass('active');
-            e.preventDefault();
+            $filterPartCtgrItem.removeClass('active');
         }
     });
 
-    $BtnCheckItems.click(function() {
+    $filterPartCtgrItem.click(function() {
         $(this).toggleClass("active");
-        if ($BtnCheckItems.hasClass('active')) {
-            $BtnCheckAll.removeClass('active');
+        if ($filterPartCtgrItem.hasClass('active')) {
+            $filterPartCtgrAll.removeClass('active');
         } else {
-            $BtnCheckAll.addClass('active');
+            $filterPartCtgrAll.addClass('active');
         }
     });
+    
+    $filterLocalAll.click(function() {
+        $filterLocalAll.addClass("active");
+        if ($(this).hasClass('active')) {
+            $filterLocalItem.removeClass('active');
+        }
+    });
+
+    $filterLocalItem.click(function() {
+        $(this).toggleClass("active");
+        if ($filterLocalItem.hasClass('active')) {
+            $filterLocalAll.removeClass('active');
+        } else {
+            $filterLocalAll.addClass('active');
+        }
+    });
+
+    $filterCareerItem.click(function() {
+        $(this).toggleClass("active");
+    });
+
+    $filterEduLevelItem.click(function() {
+        $(this).toggleClass("active");
+    });
+
+    $filterCoTypeItem.click(function() {
+        $(this).toggleClass("active");
+    });
+
+    $filterDayItem.click(function() {
+        $(this).toggleClass("active");
+    });
+
+
 
     // checked 된 버튼에 따라 원픽공고 오른쪽에 버튼 이름 기재
     function updateResultText() {
@@ -165,7 +224,8 @@ $(document).ready(function() {
         }).get();
         $recruitTxt.text(selectedLabels.join(', '));
 
-        $('button.dev-check-item, button.dev-check-all').removeClass('active'); // 모든 버튼에서 'active' 클래스 제거
+        $filterPartCtgrAll.removeClass('active');
+        $filterPartCtgrItem.removeClass('active');
 
         selectedItems.each(function() {
             var itemValue = $(this).val();
@@ -192,28 +252,33 @@ $(document).ready(function() {
 
     // 초기화 버튼 활성화
     $('.search-reset').click(function() {
-        $BtnCheckItems.removeClass("active");
-        $BtnCheckAll.addClass("active");
+        $filterPartCtgrAll.addClass("active");
+        $filterPartCtgrItem.removeClass("active");
+        $filterLocalAll.addClass("active");
+        $filterLocalItem.removeClass("active");
+        $filterCareerItem.removeClass("active");
+        $filterEduLevelItem.removeClass("active");
+        $filterCoTypeItem.removeClass("active");
+        $filterDayItem.removeClass("active");
     });
 
     // 팝업 활성 화 후 적용 버튼 누를 시
     $('.search-button, .close-button').click(function() {
         $('.filter-modal').removeClass("active");
-        let count = 0;
+        count = 0;
 
         $('.filter-box').each(function() {
             if ($(this).find('.dev-check-item.active').length > 0) {
                 count++;
             }
         });
-        if ($BtnCheckAll.hasClass("active")) {
+        if ($filterPartCtgrAll.hasClass("active")) {
             $inputCheckItems.prop('checked', false);
             $inputCheckAll.prop('checked', true);
             $inputCheckAll.addClass("on");
-            $badgeCount.css('display', 'none');
-            $badgeCount.text('0');
-        } else if (!$BtnCheckAll.hasClass("active")) {
-            $BtnCheckItems.each(function() {
+            $recruitTxt.text("전체");
+        } else if (!$filterPartCtgrAll.hasClass("active")) {
+            $filterPartCtgrItem.each(function() {
                 $inputCheckAll.removeClass("on");
                 $inputCheckAll.prop('checked', false);
                 var currentItem = $(this);
@@ -227,10 +292,15 @@ $(document).ready(function() {
                         currentCheckbox.prop('checked', true);
                     }
                 });
-                $badgeCount.css('display', 'block');
-                $badgeCount.text(count);
             });
             updateResultText();
+        }
+        if(count >= 1) {
+            $badgeCount.css('display', 'block');
+            $badgeCount.text(count);
+        } else {
+            $badgeCount.css('display', 'none');
+            $badgeCount.text(0);
         }
     });
 });
