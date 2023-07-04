@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $searchText = $('#searchText');
+    $searchButton = $('.search-button'); //on("click")
+    
     $('#searchText').on("click", function(){
         var val = $(this).val();
         $(".bannereach").hide();
@@ -9,8 +11,13 @@ $(document).ready(function() {
      
     })
 
-    $searchButton = $('.search-button'); //on("click")
-    $('.search-button').on("click")
+    $(clickHandler);
+    function clickHandler(){
+        $('.search-button').on("click", function(){
+            $("temp").show();
+            $(".bannereach").hide();
+        });
+    }
 
     $.ajax({
         url : "onpick_main.html",
