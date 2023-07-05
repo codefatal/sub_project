@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-/* 죄측 상단 로고 */
+/* 좌측 상단 로고 */
 .logo{
     display: flex;
     align-items: center ;  

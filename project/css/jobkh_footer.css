@@ -221,6 +221,17 @@
 .footer__help-text span {
     letter-spacing: 0
 }
+.footer__help--icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0;
+    vertical-align: middle;
+    background-image: url("https://i.jobkorea.kr/content/images/personal/spr_personal.png?2021032200");
+    background-repeat: no-repeat;
+    background-position: -150px 0;
+}
 
 /* 이메일 */
 .footer__help-text>a.footer__help-link {
@@ -250,6 +261,15 @@
 }
 
 /* SNS */
+.skip{
+    position: absolute !important;
+    top: -5000em;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
 .footer__sns {
     display: inline-block;
     vertical-align: middle;
@@ -277,6 +297,8 @@
     width: 20px;
     height: 20px;
     overflow: hidden;
+    background-image: url("https://i.jobkorea.kr/content/images/personal/spr_personal.png?2021032200");
+
 }
  /* SNS 위치 */
 .footer__sns-item--blog {
@@ -366,7 +388,8 @@
 .footer__award-item a::before {
     content: "";
     position: absolute;
-    background-image: url(/project/images/footer_spr_award_01.png?v202205161);
+    background-image: url("https://i.jobkorea.kr/content/images/main/footer_spr_award_01.png?v202205161");
+);
     vertical-align: top
 }
 .footer__award-item a:hover {

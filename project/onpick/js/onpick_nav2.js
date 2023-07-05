@@ -9,7 +9,7 @@ $(document).ready(function() {
         $(temp).show(); 
     })
 
-    clickHandler();
+    $(clickHandler());
     function clickHandler(){
         $('.search-button').on("click", function(){
             var val = $('#searchText').val();
