@@ -298,7 +298,7 @@
     height: 20px;
     overflow: hidden;
     background-image: url("https://i.jobkorea.kr/content/images/personal/spr_personal.png?2021032200");
-
+    background-repeat: no-repeat;
 }
  /* SNS 위치 */
 .footer__sns-item--blog {
@@ -389,7 +389,6 @@
     content: "";
     position: absolute;
     background-image: url("https://i.jobkorea.kr/content/images/main/footer_spr_award_01.png?v202205161");
-);
     vertical-align: top
 }
 .footer__award-item a:hover {
